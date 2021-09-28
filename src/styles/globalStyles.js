@@ -50,26 +50,39 @@ export const Container = styled.div`
   background-position: center;
 `;
 
+export const Billies = styled.div`
+  display: flex;
+  flex-direction: "column";
+  padding: 30px;
+  marginTop: 20px;
+  align-items: "flex-start";
+`;
+
 export const TextTitle = styled.p`
   color: var(--white);
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Marker felt";
 `;
 
 export const TextSubTitle = styled.p`
   color: var(--white);
-  font-size: 16px;
+  font-size: 40px;
   font-weight: 500;
+  font-family: "Marker felt"
 `;
 
 export const TextDescription = styled.p`
   color: var(--white);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: "Marker felt"
+
 `;
 
 export const StyledClickable = styled.div`
   :active {
-    opacity: 0.6;
+    opacity: 0.5;
+    fill: magenta
   }
 `;
