@@ -66,13 +66,13 @@ export const connect = () => {
           });
           // Add listeners end
         } else {
-          dispatch(connectFailed("Change network to ETH."));
+          dispatch(connectFailed("Change network to ETH!"));
         }
       } catch (err) {
-        dispatch(connectFailed("Something went wrong."));
+        dispatch(connectFailed("Something went wrong!"));
       }
     } else {
-      dispatch(connectFailed("Install Metamask."));
+      dispatch(connectFailed("Install Metamask"));
     }
   };
 };
