@@ -8,94 +8,15 @@ import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import logo from "./styles/Billie.gif"
+import billieIcon from "./styles/BillieLogo.png"
 import Anna from "./styles/Anna.png"
 import Kleidi from "./styles/Kleidi.png"
 import Gilmo from "./styles/Gilmo.png"
 import Untai from "./styles/Untai.png"
 import banner from "./styles/Banner.png"
-import {CheckCircle} from '@styled-icons/bootstrap/CheckCircle'
-import {Circle} from '@styled-icons/bootstrap/Circle'
-import {Rocket} from '@styled-icons/ionicons-sharp/Rocket'
-import {Link45deg} from '@styled-icons/bootstrap/Link45deg'
-import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare'
-import {Instagram} from '@styled-icons/boxicons-logos/Instagram'
-import {Github} from '@styled-icons/boxicons-logos/Github'
 import styled from "styled-components";
 import { create } from "ipfs-http-client";
 
-const CheckMark = styled(CheckCircle)`
-  color: #00cc00;
-  height: 30px;
-  width: 30px;
-`;
-
-const Unchecked = styled(Circle)`
-  color: white;
-  height: 30px;
-  width: 30px;
-`;
-
-const RocketIcon = styled(Rocket)`
-  color: white;
-  height: 40px;
-  width: 40px;
-`;
-
-const Portfolio = styled(Link45deg)`
-  width: 50px;
-  height: 50px;
-  transition: fill 0.25s;
-
-  &:hover {
-    fill: rebeccapurple;
-  }
-
-  &:active {
-    fill: #e6ffb3;
-  }
-`;
-
-const LinkedIn = styled(LinkedinSquare)`
-  width: 50px;
-  height: 50px;
-  transition: fill 0.25s;
-
-  &:hover {
-    fill: rebeccapurple;
-  }
-
-  &:active {
-    fill: #ff9999;
-  }
-`;
-
-const Git = styled(Github)`
-  width: 50px;
-  height: 50px;
-  transition: fill 0.25s;
-
-  &:hover {
-    fill: rebeccapurple;
-  }
-
-  &:active {
-    fill: #ffff99;
-  }
-`;
-
-const Ig = styled(Instagram)`
-  width: 50px;
-  height: 50px;
-  transition: fill 0.25s;
-
-  &:hover {
-    fill: rebeccapurple;
-  }
-
-  &:active {
-    fill: #ff99ff;
-  }
-`;
 
 function App() {
   const dispatch = useDispatch();
@@ -148,7 +69,8 @@ function App() {
 
       <s.Container flex={1}>
         <s.Header>
-          <s.TextSubTitle>thebillies</s.TextSubTitle>
+        <s.TextSubTitle><img src={billieIcon} alt="Icon" style={{width: 300, height: 300, marginTop: 160}}/>
+        </s.TextSubTitle>
           <s.TextSubTitle>
           <s.HeaderButton>
           <Link  to="about" spy={true} smooth={true}>
@@ -163,6 +85,11 @@ function App() {
           <s.HeaderButton>
           <Link to="roadmap" spy={true} smooth={true}>
             Roadmap
+          </Link>
+          </s.HeaderButton>
+          <s.HeaderButton>
+          <Link to="faq" spy={true} smooth={true}>
+            FAQ
           </Link>
           </s.HeaderButton>
           <s.HeaderButton>
@@ -289,7 +216,7 @@ function App() {
         <s.Container jc={"flex-end"}>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <CheckMark />
+            <s.CheckMark />
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               10%
@@ -304,7 +231,7 @@ function App() {
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <CheckMark />
+            <s.CheckMark />
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               20%
@@ -319,7 +246,7 @@ function App() {
 
 
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               30%
@@ -335,7 +262,7 @@ function App() {
 
 
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               40%
@@ -351,7 +278,7 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               50%
@@ -365,7 +292,7 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               60%
@@ -379,7 +306,7 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               70%
@@ -393,7 +320,7 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               80%
@@ -407,7 +334,7 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               90%
@@ -421,7 +348,7 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
               100%
@@ -435,24 +362,26 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <Unchecked/>
+            <s.Unchecked/>
             <s.SpacerSmall/>
             <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-            <RocketIcon/>
+            <s.RocketIcon/>
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
             <s.TextDescription>10% of all royalty proceeds will be added to the community chest and distributed as a dividend to current holders. In addition, we plan to reward Billie holders by redistributing the royalties to members on a monthly basis. This means that holding a Billie will allow you to share in the revenues of all future sales.
             </s.TextDescription>
         </s.Container>
-
+        </s.Container>
         </s.Container>
 
-
-        </s.Container>
+        <s.ContainerFour id="faq" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150}}>
+          <s.TextTitle style={{alignSelf: "flex-end"}}>FAQ IT UP!</s.TextTitle>
+          <s.SpacerMedium />
+        </s.ContainerFour>
 
         <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150, backgroundColor: "#1f1f2e" }}>
-          <s.TextTitle style={{alignSelf: "flex-end"}}>BILLIE'S BUILDERS</s.TextTitle>
+          <s.TextTitle style={{alignSelf: "flex-start"}}>BILLIE'S BUILDERS</s.TextTitle>
           <s.SpacerMedium />
 
           <s.Billies ai={"center"} style={{flexWrap: "wrap"}}>
@@ -463,7 +392,7 @@ function App() {
               <p>Director of Operations</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.linkedin.com/in/kleidimico/">
-              <LinkedIn/>
+              <s.LinkedIn/>
               </s.SocialsButton>
             </s.TextDescription>
 
@@ -473,7 +402,7 @@ function App() {
               <p>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.untaikisah.com/">
-                <Portfolio />
+                <s.Portfolio />
               </s.SocialsButton>
             </s.TextDescription>
 
@@ -483,7 +412,7 @@ function App() {
               <p>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.instagram.com/papacocomama/">
-              <Ig/>
+              <s.Ig/>
               </s.SocialsButton>
             </s.TextDescription>
 
@@ -493,14 +422,23 @@ function App() {
               <p>Developer</p>
               </s.TextDescription>
               <s.SocialsButton href="https://github.com/av1082">
-              <Git/>
+              <s.Git/>
               </s.SocialsButton>
             </s.TextDescription>
 
           </s.Billies>
         </s.ContainerThree>
-
         </s.Container>
+
+        <s.Container id="footer" flex={1} ai={"flex-end"}style={{ padding: 30, backgroundColor: "#360368" }}>
+        <s.TextDescription>© 2021 Billies</s.TextDescription>
+        </s.Container>
+        <s.SocialsButton href="https://twitter.com/BilliesNFT">
+        <s.TwitterIcon />
+        </s.SocialsButton>
+        <s.SocialsButton href="https://discord.gg/ZCY7P55q">
+        <s.Discord />
+        </s.SocialsButton>
       )
     </s.Screen>
   );
