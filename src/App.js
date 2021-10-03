@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import * as V from 'victory';
 import { VictoryPie, VictoryLabel } from 'victory';
 import { Link } from 'react-scroll';
+import Faq from "react-faq-component";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
+
 import * as s from "./styles/globalStyles";
 import logo from "./styles/Billie.gif"
 import billieIcon from "./styles/BillieLogo.png"
@@ -17,6 +19,55 @@ import banner from "./styles/Banner.png"
 import styled from "styled-components";
 import { create } from "ipfs-http-client";
 
+
+const faqData = {
+  rows: [
+      {
+          title: "What Are NFTs?",
+          content: `At a very high level, Non-fungible tokens / NFTs are items, such as artwork, that have been stored in the blockchain network. Once stored, these items cannot be changed or replaced. Hence, once created, the item lives in the network forever.`,
+      },
+      {
+          title: "What is Minting?",
+          content:
+              "Minting is the process of creating a digital artwork to make it part of the blockchain. Our devs have coded the smart contract which allows anyone with a MetaMask account to mint the NFT straight from our website.",
+      },
+      {
+          title: "How many Billie NFTs in total can be minted?",
+          content: `10,000`,
+      },
+      {
+          title: "When will pre-sale happen?",
+          content: "Members who are whitelisted can participate in the pre-sale on October 15.",
+      },
+      {
+          title: "What is the price of one mint?",
+          content: "0.08 ETH + gas (get on the whitelist to save $$ on gas)",
+      },
+      {
+          title: "How many can I mint?",
+          content: "Pre-sale 2 maximum, public sale 10 maximum",
+      },
+  ],
+};
+
+const faqStyles = {
+  bgColor: "transparent",
+  fontFamily: "Marker felt",
+  rowContentTextSize: "20px",
+  rowTitleColor: "white",
+  rowTitleTextSize: "30px",
+  rowContentColor: 'white',
+  arrowColor: "orange",
+  rowContentPaddingTop: "10px",
+  rowContentPaddingBottom: "10px",
+
+};
+
+const faqConfig = {
+  animate: true,
+  arrowIcon: "+",
+  tabFocus: true
+};
 
 function App() {
   const dispatch = useDispatch();
@@ -377,6 +428,13 @@ function App() {
 
         <s.ContainerFour id="faq" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150}}>
           <s.TextTitle style={{alignSelf: "flex-end"}}>FAQ IT UP!</s.TextTitle>
+          <s.SpacerMedium/>
+          <Faq
+          data={faqData}
+          styles={faqStyles}
+          config={faqConfig}
+
+          />
           <s.SpacerMedium />
         </s.ContainerFour>
 
@@ -433,7 +491,7 @@ function App() {
         <s.Container id="footer" flex={1} ai={"flex-end"}style={{ padding: 30, backgroundColor: "#360368" }}>
         <s.TextDescription>© 2021 Billies</s.TextDescription>
         </s.Container>
-        <s.SocialsButton href="https://twitter.com/BilliesNFT">
+        <s.SocialsButton href="https://twitter.com/NFTBillies">
         <s.TwitterIcon />
         </s.SocialsButton>
         <s.SocialsButton href="https://discord.gg/ZCY7P55q">

@@ -194,6 +194,7 @@ export const ContainerFour = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url(${gradientTwo});
+  font-family: "Marker felt";
 `;
 
 export const Billies = styled.p`
