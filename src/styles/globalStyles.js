@@ -38,24 +38,7 @@ export const Header = styled.div`
   height: 80px;
   background: #360368;
   color: #fff;
-  font-family: "Marker felt";
-`;
-
-export const Footer = styled.div`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  flex: ${({ flex }) => (flex ? flex : 0)};
-  flex-direction: ${({ fd }) => (fd ? fd : "row")};
-  justify-content: ${({ jc }) => (jc ? jc : "space-between")};
-  align-items: ${({ ai }) => (ai ? ai : "center")};
-  font-size: 50px;
-  line-height: 80px;
-  height: 80px;
-  background: #360368;
-  color: #fff;
-  font-family: "Marker felt";
+  font-family: "Copperplate";
 `;
 
 export const HeaderButton = styled.button`
@@ -66,7 +49,7 @@ export const HeaderButton = styled.button`
   background: #360368;
   color: white;
   font-weight: bold;
-  font-family: "Marker felt";
+  font-family: "Copperplate";
   border: 2px solid #360368;
 
   &:hover {
@@ -84,7 +67,7 @@ export const MintButton = styled.button`
   background: #360368;
   color: white;
   font-weight: bold;
-  font-family: "Marker felt";
+  font-family: "Copperplate";
   border: 2px solid #360368;
 
   &:hover {
@@ -104,7 +87,7 @@ export const ConnectButton = styled.button`
   background: orange;
   color: white;
   font-weight: bold;
-  font-family: "Marker felt";
+  font-family: "Copperplate";
   border: 2px solid orange;
 
   &:hover {
@@ -194,7 +177,7 @@ export const ContainerFour = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url(${gradientTwo});
-  font-family: "Marker felt";
+  font-family: "Copperplate";
 `;
 
 export const Billies = styled.p`
@@ -210,7 +193,7 @@ export const TextTitle = styled.p`
   color: var(--white);
   font-size: 80px;
   font-weight: bold;
-  font-family: "Marker felt";
+  font-family: "Copperplate";
   display: flex;
   align-self: ${({ ai }) => (ai ? ai : "flex-start")};
 `;
@@ -219,14 +202,14 @@ export const TextSubTitle = styled.p`
   color: var(--white);
   font-size: 40px;
   font-weight: bold;
-  font-family: "Marker felt"
+  font-family: "Copperplate"
 `;
 
 export const TextDescription = styled.p`
   color: var(--white);
   font-size: 20px;
   font-weight: 300;
-  font-family: "Marker felt";
+  font-family: "Copperplate";
 
 `;
 
