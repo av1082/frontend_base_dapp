@@ -167,7 +167,7 @@ function App() {
             {feedback}
           </s.TextDescription>
           <s.SpacerSmall />
-          <s.MintButton
+          {/* <s.MintButton
           disabled={claimingNFT ? 1 : 0}
             onClick={(e) => {
               e.preventDefault();
@@ -195,7 +195,7 @@ function App() {
             }}
           >
             {claimingNFT ? "BUSY MINTING" : "MINT 10 BILLIES" }
-          </s.MintButton>
+          </s.MintButton> */}
           <s.SpacerSmall/>
           <s.SpacerSmall />
           <s.ConnectButton
