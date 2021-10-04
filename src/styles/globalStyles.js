@@ -17,11 +17,14 @@ export const Screen = styled.div`
   background-color: #360368;
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 100vh;
   display: flex;
+  flex: 1;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 `;
 
 export const Header = styled.div`
@@ -39,7 +42,10 @@ export const Header = styled.div`
   background: #360368;
   color: #fff;
   font-family: "Copperplate";
+
 `;
+
+
 
 export const HeaderButton = styled.button`
   padding: 10px;
@@ -79,10 +85,18 @@ export const MintButton = styled.button`
   }
 `;
 
+function getWidthString(span) {
+  if (!span) return;
+
+  let width = span / 12 * 100
+  return `width: ${width}%;`;
+}
+
 export const ConnectButton = styled.button`
-  padding: 10px;
-  height: 80px;
   width: 240px;
+  height: 80px;
+  max-width: 100%;
+  padding: 10px;
   border-radius: 40px;
   background: orange;
   color: white;
@@ -96,6 +110,18 @@ export const ConnectButton = styled.button`
   }
   &:focus {
     opacity: 0.2;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${({sm}) => sm && getWidthString(sm)};
+  }
+
+  @media only screen and (min-width: 992px) {
+    ${({md}) => md && getWidthString(md)};
+  }
+
+  @media only screen and (min-width: 1200ppx) {
+    ${({lg}) => lg && getWidthString(lg)};
   }
 `;
 
@@ -133,9 +159,6 @@ export const Container = styled.div`
   background-color: ${({ test }) => (test ? "pink" : "none")};
   width: 100%;
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-size: cover;
-  background-position: center;
-
 `;
 
 export const ContainerTwo = styled.div`
@@ -146,7 +169,6 @@ export const ContainerTwo = styled.div`
   align-items: ${({ ai }) => (ai ? ai : "flex-start")};
   background-color: ${({ test }) => (test ? "pink" : "none")};
   width: 100%;
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: cover;
   background-position: center;
   background-image: url(${gradient});
@@ -194,8 +216,6 @@ export const TextTitle = styled.p`
   font-size: 80px;
   font-weight: bold;
   font-family: "Copperplate";
-  display: flex;
-  align-self: ${({ ai }) => (ai ? ai : "flex-start")};
 `;
 
 export const TextSubTitle = styled.p`
@@ -210,7 +230,6 @@ export const TextDescription = styled.p`
   font-size: 20px;
   font-weight: 300;
   font-family: "Copperplate";
-
 `;
 
 export const StyledClickable = styled.div`

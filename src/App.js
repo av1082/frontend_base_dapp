@@ -67,7 +67,6 @@ const faqStyles = {
   arrowColor: "orange",
   rowContentPaddingTop: "10px",
   rowContentPaddingBottom: "10px",
-
 };
 
 const faqConfig = {
@@ -106,61 +105,36 @@ function App() {
 
   return (
     <s.Screen>
-      {/* {blockchain.account === "" || blockchain.smartContract === null ? (
-        <s.Container flex={1} ai={"center"} jc={"center"}>
-          <s.TextTitle>Connect to the Blockchain</s.TextTitle>
-          <s.SpacerSmall />
-          <s.StyledButton
-            onClick={(e) => {
-              e.preventDefault();
-              dispatch(connect());
-            }}
-          >
-            CONNECT
-          </s.StyledButton>
-          <s.SpacerSmall />
-          {blockchain.errorMsg !== "" ? (
-            <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
-          ) : null}
-        </s.Container>
-      ) : ( */}
-
-      <s.Container flex={1}>
-        <s.Header>
-        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{width: 400, height: 100, marginTop: 48}}/>
+      <s.Header flex={1}>
+        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{width: 300, height: 75, marginTop: 48}}/>
         </s.TextSubTitle>
-          <s.TextSubTitle>
-          <s.HeaderButton>
-          <Link  to="about" spy={true} smooth={true}>
-            About
+          <s.Container fd={"row"} style={{maxWidth: "100%"}}>
+          <Link to="about" spy={true} smooth={true}>
+          <s.HeaderButton>About</s.HeaderButton>
           </Link>
-          </s.HeaderButton>
-          <s.HeaderButton>
+
           <Link to="rarities" spy={true} smooth={true}>
-            Rarities
+          <s.HeaderButton>Rarities</s.HeaderButton>
           </Link>
-          </s.HeaderButton>
-          <s.HeaderButton>
+
           <Link to="roadmap" spy={true} smooth={true}>
-            Roadmap
+          <s.HeaderButton>Roadmap</s.HeaderButton>
           </Link>
-          </s.HeaderButton>
-          <s.HeaderButton>
+
           <Link to="faq" spy={true} smooth={true}>
-            FAQ
+          <s.HeaderButton>FAQ </s.HeaderButton>
           </Link>
-          </s.HeaderButton>
-          <s.HeaderButton>
+
           <Link to="team" spy={true} smooth={true}>
-            Team
+          <s.HeaderButton>Team</s.HeaderButton>
           </Link>
-          </s.HeaderButton>
-          </s.TextSubTitle>
+        </s.Container>
+
         </s.Header>
 
-        <s.Container flex={1} ai={"center"} jc={"center"} style={{marginTop: 80,  backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")` }}>
+        <s.Container flex={1} ai={"center"} jc={"center"} style={{marginTop: 80, backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")`}}>
           <s.TextTitle style={{ textAlign: "center", alignSelf: "center", marginTop: 100 }}>
-          <img src={Title} alt="About" style={ {width: 900, height: 220}}/>
+          <img src={Title} alt="About" style={{maxWidth: "100%", maxHeight: "100%"}}/>
           </s.TextTitle>
           <s.SpacerXSmall />
           <s.TextDescription style={{ textAlign: "center" }}>
@@ -203,6 +177,7 @@ function App() {
               e.preventDefault();
               dispatch(connect());
             }}
+            style={{maxWidth: "100%", maxHeight: "100%"}}
           >
             <s.TextSubTitle>CONNECT</s.TextSubTitle>
           </s.ConnectButton>
@@ -211,25 +186,26 @@ function App() {
           {blockchain.errorMsg !== "" ? (
             <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
           ) : null}
-          <img src={banner} alt="Banner"/>
+          <img src={banner} alt="Banner" style={{maxWidth: "100%"}}/>
         </s.Container>
 
+        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 100, backgroundColor: "#360368" }}>
 
-        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"center"} style={{ padding: 100, backgroundColor: "#360368" }}>
-
-          <s.Billies jc={"space-around"}>
-            <s.TextSubTitle><img src={logo} alt="Logo" style={ {borderRadius: 60, width: 350, height: 350, marginRight: 200}}/></s.TextSubTitle>
-            <s.SpacerMedium/>
-          <s.Billies fd={"column"}>
-          <s.TextSubTitle style={{alignSelf: "center"}}><img src={About} alt="About" style={ {width: 600, height: 120}}/></s.TextSubTitle>
-          <s.SpacerSmall />
-          <s.TextDescription style={{alignSelf: "center"}}>In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?</s.TextDescription>
-          </s.Billies>
-          </s.Billies>
+        <s.TextSubTitle style={{alignSelf: "center"}}>
+          <img src={About} alt="About" style={{maxWidth: "100%"}}/>
+        </s.TextSubTitle>
+        <s.Container fd={"row"} jc={"space-between"}>
+          <s.TextDescription><img src={logo} alt="Logo" style={{borderRadius: 20, marginRight: 100, width: 300, height: 300}}/>
+          </s.TextDescription>
+          <s.TextDescription>In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
+          </s.TextDescription>
+        </s.Container>
         </s.ContainerThree>
 
         <s.ContainerTwo id="rarities" ai={"center"} style={{ padding: 100 }}>
-          <s.TextTitle style={{alignSelf: "center"}}><img src={Rarities} alt="Rarities" style={ {width: 750, height: 140}}/></s.TextTitle>
+          <s.TextTitle style={{alignSelf: "center"}}>
+            <img src={Rarities} alt="Rarities" style={{maxWidth: "100%"}}/>
+            </s.TextTitle>
           <svg width={600} height={600}>
           <VictoryLabel
             textAnchor="middle"
@@ -257,17 +233,12 @@ function App() {
           />
           </svg>
             <s.SpacerSmall/>
-          {/* <s.Billies fd={"column"}>
-          <s.TextSubTitle style={{alignSelf: "center"}}>Who are we?</s.TextSubTitle>
-          <s.SpacerSmall />
-          <s.TextDescription style={{alignSelf: "center"}}>description</s.TextDescription>
-          </s.Billies> */}
-
         </s.ContainerTwo>
 
-
         <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ padding: 100, backgroundColor: "#360368" }}>
-            <s.TextTitle style={{alignSelf: "center"}}><img src={Roadmap} alt="Roadmap" style={ {width: 900, height: 120}}/></s.TextTitle>
+            <s.TextTitle style={{alignSelf: "center"}}>
+              <img src={Roadmap} alt="Roadmap" style={{maxWidth: "100%"}}/>
+              </s.TextTitle>
             <s.SpacerMedium />
 
         <s.Container jc={"flex-end"}>
@@ -433,24 +404,30 @@ function App() {
         </s.Container>
 
         <s.ContainerFour id="faq" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150}}>
-          <s.TextTitle style={{alignSelf: "center"}}><img src={FAQ} alt="FAQ" style={ {width: 1050, height: 230}}/></s.TextTitle>
+          <s.TextTitle>
+            <img src={FAQ} alt="FAQ" style={{maxWidth: "100%"}}/>
+          </s.TextTitle>
           <s.SpacerSmall/>
+
           <Faq
           data={faqData}
           styles={faqStyles}
           config={faqConfig}
-
           />
+
           <s.SpacerSmall/>
         </s.ContainerFour>
 
         <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150, backgroundColor: "#1f1f2e" }}>
-          <s.TextTitle style={{alignSelf: "center"}}><img src={Team} alt="About" style={ {width: 1050, height: 220}}/></s.TextTitle>
+          <s.TextTitle style={{alignSelf: "center"}}>
+            <img src={Team} alt="About" style={{maxWidth: "100%"}}/>
+          </s.TextTitle>
           <s.SpacerSmall />
 
           <s.Billies ai={"center"} style={{flexWrap: "wrap"}}>
 
-            <s.TextDescription><img src={Kleidi} alt="Logo" style={ {borderRadius: 150, border: "2px solid black", boxShadow: "3px 3px black", width: 300, height: 300}}/>
+            <s.TextDescription>
+              <img src={Kleidi} alt="Logo" style={ {borderRadius: 150, border: "2px solid black", boxShadow: "3px 3px black", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
               <s.TextDescription style={{textAlign: "center", color: "black", backgroundColor: "#ff9999", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Kleidi
               <p>Director of Operations</p>
@@ -492,7 +469,6 @@ function App() {
 
           </s.Billies>
         </s.ContainerThree>
-        </s.Container>
 
         <s.Container id="footer" flex={1} ai={"flex-start"}style={{ padding: 30, backgroundColor: "#360368" }}>
         <s.TextDescription>© 2021 The Billies</s.TextDescription>
@@ -503,7 +479,6 @@ function App() {
         <s.SocialsButton href="https://discord.gg/ZCY7P55q">
         <s.Discord />
         </s.SocialsButton>
-      )
     </s.Screen>
   );
 }
