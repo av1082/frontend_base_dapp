@@ -105,10 +105,10 @@ function App() {
 
   return (
     <s.Screen>
-      <s.Header flex={1}>
-        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{width: 300, height: 75, marginTop: 48}}/>
+      <s.Header>
+        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{maxWidth: "60%", marginTop: 60}}/>
         </s.TextSubTitle>
-          <s.Container fd={"row"} style={{maxWidth: "100%"}}>
+          <s.Container fd={"row"} ai={"flex-end"} style={{padding: 10}}>
           <Link to="about" spy={true} smooth={true}>
           <s.HeaderButton>About</s.HeaderButton>
           </Link>
@@ -133,7 +133,7 @@ function App() {
         </s.Header>
 
         <s.Container flex={1} ai={"center"} jc={"center"} style={{marginTop: 80, backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")`}}>
-          <s.TextTitle style={{ textAlign: "center", alignSelf: "center", marginTop: 100 }}>
+          <s.TextTitle style={{alignSelf: "center", marginTop: 100 }}>
           <img src={Title} alt="About" style={{maxWidth: "100%", maxHeight: "100%"}}/>
           </s.TextTitle>
           <s.SpacerXSmall />
@@ -189,22 +189,22 @@ function App() {
           <img src={banner} alt="Banner" style={{maxWidth: "100%"}}/>
         </s.Container>
 
-        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 100, backgroundColor: "#360368" }}>
+        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 80, backgroundColor: "#360368" }}>
 
         <s.TextSubTitle style={{alignSelf: "center"}}>
           <img src={About} alt="About" style={{maxWidth: "100%"}}/>
         </s.TextSubTitle>
         <s.Container fd={"row"} jc={"space-between"}>
-          <s.TextDescription><img src={logo} alt="Logo" style={{borderRadius: 20, marginRight: 100, width: 300, height: 300}}/>
+          <s.TextDescription><img src={logo} alt="Logo" style={{borderRadius: 20, marginRight: 50, width: 300, height: 300}}/>
           </s.TextDescription>
           <s.TextDescription>In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
           </s.TextDescription>
         </s.Container>
         </s.ContainerThree>
 
-        <s.ContainerTwo id="rarities" ai={"center"} style={{ padding: 100 }}>
+        <s.ContainerTwo id="rarities" ai={"center"} style={{ marginTop: 40, padding: 80 }}>
           <s.TextTitle style={{alignSelf: "center"}}>
-            <img src={Rarities} alt="Rarities" style={{maxWidth: "100%"}}/>
+            <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/>
             </s.TextTitle>
           <svg width={600} height={600}>
           <VictoryLabel
@@ -235,19 +235,20 @@ function App() {
             <s.SpacerSmall/>
         </s.ContainerTwo>
 
-        <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ padding: 100, backgroundColor: "#360368" }}>
+        <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ marginTop: 40, padding: 90, backgroundColor: "#360368" }}>
             <s.TextTitle style={{alignSelf: "center"}}>
               <img src={Roadmap} alt="Roadmap" style={{maxWidth: "100%"}}/>
               </s.TextTitle>
             <s.SpacerMedium />
 
-        <s.Container jc={"flex-end"}>
+        <s.Container>
+
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.CheckMark />
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              10%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>10%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             </s.Container>
 
@@ -261,8 +262,8 @@ function App() {
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.CheckMark />
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              20%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>20%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             </s.Container>
             <s.SpacerSmall/>
@@ -276,8 +277,8 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              30%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>30%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             </s.Container>
             <s.SpacerSmall/>
@@ -292,8 +293,8 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              40%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>40%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             <s.SpacerSmall/>
             </s.Container>
@@ -308,8 +309,8 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              50%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>50%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
@@ -322,8 +323,8 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              60%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>60%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
@@ -336,8 +337,8 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              70%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>70%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
@@ -350,8 +351,8 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              80%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>80%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
@@ -364,8 +365,8 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-              90%
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}>"</break>90%<break style={{color: "#1f1f2e"}}>"</break>
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
@@ -378,7 +379,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
               100%
             </s.TextSubTitle>
             <s.SpacerSmall/>
@@ -392,8 +393,8 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, borderRadius: 10, boxShadow: 20}}>
-            <s.RocketIcon/>
+            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <s.RocketIcon style={{marginLeft: 36, marginRight: 36}}/>
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
@@ -403,7 +404,7 @@ function App() {
         </s.Container>
         </s.Container>
 
-        <s.ContainerFour id="faq" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150}}>
+        <s.ContainerFour id="faq" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{padding: 80}}>
           <s.TextTitle>
             <img src={FAQ} alt="FAQ" style={{maxWidth: "100%"}}/>
           </s.TextTitle>
@@ -418,7 +419,7 @@ function App() {
           <s.SpacerSmall/>
         </s.ContainerFour>
 
-        <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150, backgroundColor: "#1f1f2e" }}>
+        <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{backgroundColor: "#1f1f2e", padding: 80 }}>
           <s.TextTitle style={{alignSelf: "center"}}>
             <img src={Team} alt="About" style={{maxWidth: "100%"}}/>
           </s.TextTitle>

@@ -36,9 +36,8 @@ export const Header = styled.div`
   flex-direction: ${({ fd }) => (fd ? fd : "row")};
   justify-content: ${({ jc }) => (jc ? jc : "space-between")};
   align-items: ${({ ai }) => (ai ? ai : "center")};
-  font-size: 50px;
-  line-height: 100px;
-  height: 80px;
+  line-height: 120px;
+  height: 100px;
   background: #360368;
   color: #fff;
   font-family: "Copperplate";
@@ -50,12 +49,13 @@ export const Header = styled.div`
 export const HeaderButton = styled.button`
   padding: 10px;
   height: 40px;
-  width: 100px;
+  width: 90px;
   border-radius: 20px;
   background: #360368;
   color: white;
   font-weight: bold;
   font-family: "Copperplate";
+  font-size: 15px;
   border: 2px solid #360368;
 
   &:hover {
