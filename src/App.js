@@ -11,11 +11,18 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import logo from "./styles/Billie.gif"
 import billieIcon from "./styles/BillieLogo.png"
+import billieTitle from "./styles/BillieTitle.png"
 import Anna from "./styles/Anna.png"
 import Kleidi from "./styles/Kleidi.png"
 import Gilmo from "./styles/Gilmo.png"
 import Untai from "./styles/Untai.png"
 import banner from "./styles/Banner.png"
+import Roadmap from "./styles/Roadmap.png"
+import About from "./styles/About.png"
+import Team from "./styles/Team.png"
+import Title from "./styles/Title.png"
+import Rarities from "./styles/Rarities.png"
+import FAQ from "./styles/FAQ.png"
 import styled from "styled-components";
 import { create } from "ipfs-http-client";
 
@@ -73,7 +80,7 @@ function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
-  const [feedback, setFeedback] = useState("Maybe it's your lucky day ;)")
+  const [feedback, setFeedback] = useState("")
   const [claimingNFT, setClaimingNFT] = useState(false)
 
   const claimNFTs = (_amount) => {
@@ -120,7 +127,7 @@ function App() {
 
       <s.Container flex={1}>
         <s.Header>
-        <s.TextSubTitle><img src={billieIcon} alt="Icon" style={{width: 300, height: 300, marginTop: 160}}/>
+        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{width: 400, height: 100, marginTop: 48}}/>
         </s.TextSubTitle>
           <s.TextSubTitle>
           <s.HeaderButton>
@@ -153,7 +160,7 @@ function App() {
 
         <s.Container flex={1} ai={"center"} jc={"center"} style={{marginTop: 80,  backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")` }}>
           <s.TextTitle style={{ textAlign: "center", alignSelf: "center", marginTop: 100 }}>
-            Release a Billie!
+          <img src={Title} alt="About" style={ {width: 900, height: 220}}/>
           </s.TextTitle>
           <s.SpacerXSmall />
           <s.TextDescription style={{ textAlign: "center" }}>
@@ -209,13 +216,12 @@ function App() {
 
 
         <s.ContainerThree id="about" flex={1} ai={"center"} jc={"center"} style={{ padding: 100, backgroundColor: "#360368" }}>
-          <s.TextTitle>THE BILLIES</s.TextTitle>
-          <s.SpacerMedium />
+
           <s.Billies jc={"space-around"}>
             <s.TextSubTitle><img src={logo} alt="Logo" style={ {borderRadius: 60, width: 350, height: 350, marginRight: 200}}/></s.TextSubTitle>
             <s.SpacerMedium/>
           <s.Billies fd={"column"}>
-          <s.TextSubTitle style={{alignSelf: "center"}}>How it all began...</s.TextSubTitle>
+          <s.TextSubTitle style={{alignSelf: "center"}}><img src={About} alt="About" style={ {width: 600, height: 120}}/></s.TextSubTitle>
           <s.SpacerSmall />
           <s.TextDescription style={{alignSelf: "center"}}>In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?</s.TextDescription>
           </s.Billies>
@@ -223,7 +229,7 @@ function App() {
         </s.ContainerThree>
 
         <s.ContainerTwo id="rarities" ai={"center"} style={{ padding: 100 }}>
-          <s.TextTitle style={{alignSelf: "flex-end"}}>RARITIES</s.TextTitle>
+          <s.TextTitle style={{alignSelf: "center"}}><img src={Rarities} alt="Rarities" style={ {width: 750, height: 140}}/></s.TextTitle>
           <svg width={600} height={600}>
           <VictoryLabel
             textAnchor="middle"
@@ -250,7 +256,7 @@ function App() {
             height={600} width={600}
           />
           </svg>
-            <s.SpacerMedium/>
+            <s.SpacerSmall/>
           {/* <s.Billies fd={"column"}>
           <s.TextSubTitle style={{alignSelf: "center"}}>Who are we?</s.TextSubTitle>
           <s.SpacerSmall />
@@ -261,7 +267,7 @@ function App() {
 
 
         <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ padding: 100, backgroundColor: "#360368" }}>
-            <s.TextTitle>ROADMAP</s.TextTitle>
+            <s.TextTitle style={{alignSelf: "center"}}><img src={Roadmap} alt="Roadmap" style={ {width: 900, height: 120}}/></s.TextTitle>
             <s.SpacerMedium />
 
         <s.Container jc={"flex-end"}>
@@ -304,7 +310,7 @@ function App() {
             </s.TextSubTitle>
             </s.Container>
             <s.SpacerSmall/>
-            <s.TextDescription>30 winners of $15,000 total will be selected for giveaways.
+            <s.TextDescription>30 winners, $15,000 total to be raffled to the community.
             </s.TextDescription>
         </s.Container>
 
@@ -321,7 +327,7 @@ function App() {
             <s.SpacerSmall/>
             </s.Container>
 
-            <s.TextDescription>4 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community members who have listed their Billies above a certain price or not listed at all.
+            <s.TextDescription>4 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community.
             </s.TextDescription>
         </s.Container>
 
@@ -336,7 +342,7 @@ function App() {
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>$50,000 donated to a mental health charity. Our team wants to raise awareness on mental health and we want to contribute in that mission.  The charity will be picked by our community. Polls will be send out in our Discord channel for a vote.
+            <s.TextDescription>$50,000 donated to a mental health charity. The charity will be picked by our community.
             </s.TextDescription>
         </s.Container>
 
@@ -350,7 +356,7 @@ function App() {
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>600 free merchandise of your favorite Billie NFT! NFT can be printed on any colored sweatshirt, sweater, shirt, hat, sock or pillow and will be sent to your street address.  Forms to be sent on Discord.
+            <s.TextDescription>600 free merchandise of your favorite Billie NFT! Merchandise type will be voted by community.
             </s.TextDescription>
         </s.Container>
 
@@ -364,7 +370,7 @@ function App() {
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>7 Billie holders will have the chance to design their own Billie! Each one of these NFTs will be given rare attributes. Our artists will work with you from the initial sketch down to the last detail of every attribute.  Holders of these NFTs will receive a special role in the Discord channel and will be given other secret prizes.
+            <s.TextDescription>7 Billie holders will have the chance to design their own Billie! Each one of these NFTs will be given rare attributes.
             </s.TextDescription>
         </s.Container>
 
@@ -378,7 +384,7 @@ function App() {
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>8 Billie holders will be given concert tickets to the Happier Than Ever, The World Tour. Tickets will be given out based on the location preference of the winners.
+            <s.TextDescription>8 Billie holders will be given concert tickets to the Happier Than Ever, The World Tour.
             </s.TextDescription>
         </s.Container>
 
@@ -392,7 +398,7 @@ function App() {
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>9 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to our community members who have listed their Billies above a certain price or not listed at all.
+            <s.TextDescription>9 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community.
             </s.TextDescription>
         </s.Container>
 
@@ -406,7 +412,7 @@ function App() {
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>10% of all royalty proceeds will be added to the community chest and distributed as a dividend to current holders. In addition, we plan to reward Billie holders by redistributing the royalties to members on a monthly basis. This means that holding a Billie will allow you to share in the revenues of all future sales.
+            <s.TextDescription>50% of ALL royalty proceeds be either distributed to current Billie holders OR be used to SWEEP the floor price.  Voted by the ccommunity! Which will you choose?
             </s.TextDescription>
         </s.Container>
 
@@ -420,27 +426,27 @@ function App() {
             </s.TextSubTitle>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>10% of all royalty proceeds will be added to the community chest and distributed as a dividend to current holders. In addition, we plan to reward Billie holders by redistributing the royalties to members on a monthly basis. This means that holding a Billie will allow you to share in the revenues of all future sales.
+            <s.TextDescription>In addition to sharing in the royalties, holders will also be rewarded with Billie Coins. We will partner up with developers to create a liquidity pool and generate passive income!
             </s.TextDescription>
         </s.Container>
         </s.Container>
         </s.Container>
 
         <s.ContainerFour id="faq" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150}}>
-          <s.TextTitle style={{alignSelf: "flex-end"}}>FAQ IT UP!</s.TextTitle>
-          <s.SpacerMedium/>
+          <s.TextTitle style={{alignSelf: "center"}}><img src={FAQ} alt="FAQ" style={ {width: 1050, height: 230}}/></s.TextTitle>
+          <s.SpacerSmall/>
           <Faq
           data={faqData}
           styles={faqStyles}
           config={faqConfig}
 
           />
-          <s.SpacerMedium />
+          <s.SpacerSmall/>
         </s.ContainerFour>
 
         <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{ padding: 100, marginRight: 150, backgroundColor: "#1f1f2e" }}>
-          <s.TextTitle style={{alignSelf: "flex-start"}}>BILLIE'S BUILDERS</s.TextTitle>
-          <s.SpacerMedium />
+          <s.TextTitle style={{alignSelf: "center"}}><img src={Team} alt="About" style={ {width: 1050, height: 220}}/></s.TextTitle>
+          <s.SpacerSmall />
 
           <s.Billies ai={"center"} style={{flexWrap: "wrap"}}>
 
@@ -488,8 +494,8 @@ function App() {
         </s.ContainerThree>
         </s.Container>
 
-        <s.Container id="footer" flex={1} ai={"flex-end"}style={{ padding: 30, backgroundColor: "#360368" }}>
-        <s.TextDescription>© 2021 Billies</s.TextDescription>
+        <s.Container id="footer" flex={1} ai={"flex-start"}style={{ padding: 30, backgroundColor: "#360368" }}>
+        <s.TextDescription>© 2021 The Billies</s.TextDescription>
         </s.Container>
         <s.SocialsButton href="https://twitter.com/NFTBillies">
         <s.TwitterIcon />
