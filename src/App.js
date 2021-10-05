@@ -7,9 +7,11 @@ import { Link } from 'react-scroll';
 import Faq from "react-faq-component";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
+import CountDownTimer from './components/Countdown'
 
 import * as s from "./styles/globalStyles";
 import logo from "./styles/Billie.gif"
+import billie from "./styles/BillieDrawing.png"
 import billieIcon from "./styles/BillieLogo.png"
 import billieTitle from "./styles/BillieTitle.png"
 import Anna from "./styles/Anna.png"
@@ -22,6 +24,7 @@ import About from "./styles/About.png"
 import Team from "./styles/Team.png"
 import Title from "./styles/Title.png"
 import Rarities from "./styles/Rarities.png"
+
 import FAQ from "./styles/FAQ.png"
 import styled from "styled-components";
 import { create } from "ipfs-http-client";
@@ -75,12 +78,17 @@ const faqConfig = {
   tabFocus: true
 };
 
+
+
 function App() {
+
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [feedback, setFeedback] = useState("")
   const [claimingNFT, setClaimingNFT] = useState(false)
+
+  const daysHoursMinSecs = {days: 12, hours: 1, minutes: 50, seconds: 40}
 
   const claimNFTs = (_amount) => {
     setClaimingNFT(true);
@@ -104,7 +112,7 @@ function App() {
   }, [blockchain.smartContract, dispatch]);
 
   return (
-    <s.Screen>
+    <s.Screen class="body">
       <s.Header>
         <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{maxWidth: "60%", marginTop: 60}}/>
         </s.TextSubTitle>
@@ -129,13 +137,13 @@ function App() {
           <s.HeaderButton>Team</s.HeaderButton>
           </Link>
         </s.Container>
-
         </s.Header>
 
         <s.Container flex={1} ai={"center"} jc={"center"} style={{marginTop: 80, backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")`}}>
           <s.TextTitle style={{alignSelf: "center", marginTop: 100 }}>
           <img src={Title} alt="About" style={{maxWidth: "100%", maxHeight: "100%"}}/>
           </s.TextTitle>
+          <CountDownTimer daysHoursMinSecs={daysHoursMinSecs}/>
           <s.SpacerXSmall />
           <s.TextDescription style={{ textAlign: "center" }}>
             {feedback}
@@ -195,7 +203,7 @@ function App() {
           <img src={About} alt="About" style={{maxWidth: "100%"}}/>
         </s.TextSubTitle>
         <s.Container fd={"row"} jc={"space-between"}>
-          <s.TextDescription><img src={logo} alt="Logo" style={{borderRadius: 20, marginRight: 50, width: 300, height: 300}}/>
+          <s.TextDescription><img src={billie} alt="Logo" style={{borderRadius: 20, marginRight: 50, maxWidth: "100%"}}/>
           </s.TextDescription>
           <s.TextDescription>In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
           </s.TextDescription>
@@ -409,12 +417,13 @@ function App() {
             <img src={FAQ} alt="FAQ" style={{maxWidth: "100%"}}/>
           </s.TextTitle>
           <s.SpacerSmall/>
-
+          <s.Container >
           <Faq
           data={faqData}
           styles={faqStyles}
           config={faqConfig}
           />
+          </s.Container>
 
           <s.SpacerSmall/>
         </s.ContainerFour>
@@ -433,17 +442,17 @@ function App() {
               <s.TextDescription style={{textAlign: "center", color: "black", backgroundColor: "#ff9999", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Kleidi
               <p>Director of Operations</p>
               </s.TextDescription>
-              <s.SocialsButton href="https://www.linkedin.com/in/kleidimico/">
+              <s.SocialsButton href="https://www.linkedin.com/in/kleidimico/" target="_blank">
               <s.LinkedIn/>
               </s.SocialsButton>
             </s.TextDescription>
 
             <s.TextDescription><img src={Untai} alt="Logo" style={ {borderRadius: 150, border: "2px solid black", boxShadow: "3px 3px black", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{textAlign: "center", color: "black", backgroundColor: "#e6ffb3", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Untai
+              <s.TextDescription alignSelf={"center"} style={{textAlign: "center", color: "black", backgroundColor: "#e6ffb3", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black" }}>Untai
               <p>Illustrator</p>
               </s.TextDescription>
-              <s.SocialsButton href="https://www.untaikisah.com/">
+              <s.SocialsButton href="https://www.untaikisah.com/" target="_blank">
                 <s.Portfolio />
               </s.SocialsButton>
             </s.TextDescription>
@@ -453,7 +462,7 @@ function App() {
               <s.TextDescription alignSelf={"center"} style={{textAlign: "center", color: "black", backgroundColor: "#ff99ff", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Pacomang
               <p>Illustrator</p>
               </s.TextDescription>
-              <s.SocialsButton href="https://www.instagram.com/papacocomama/">
+              <s.SocialsButton href="https://www.instagram.com/papacocomama/" target="_blank">
               <s.Ig/>
               </s.SocialsButton>
             </s.TextDescription>
@@ -463,7 +472,7 @@ function App() {
               <s.TextDescription alignSelf={"center"} style={{textAlign: "center", color: "black", backgroundColor: "#ffff99", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Anya
               <p>Developer</p>
               </s.TextDescription>
-              <s.SocialsButton href="https://github.com/av1082">
+              <s.SocialsButton href="https://github.com/av1082" target="_blank">
               <s.Git/>
               </s.SocialsButton>
             </s.TextDescription>
@@ -474,10 +483,12 @@ function App() {
         <s.Container id="footer" flex={1} ai={"flex-start"}style={{ padding: 30, backgroundColor: "#360368" }}>
         <s.TextDescription>© 2021 The Billies</s.TextDescription>
         </s.Container>
-        <s.SocialsButton href="https://twitter.com/NFTBillies">
+
+        <s.SocialsButton href="https://twitter.com/NFTBillies" target="_blank">
         <s.TwitterIcon />
         </s.SocialsButton>
-        <s.SocialsButton href="https://discord.gg/ZCY7P55q">
+
+        <s.SocialsButton href="https://discord.gg/ZCY7P55q" target="_blank">
         <s.Discord />
         </s.SocialsButton>
     </s.Screen>

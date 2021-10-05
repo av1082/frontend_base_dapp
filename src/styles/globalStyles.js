@@ -24,11 +24,11 @@ export const Screen = styled.div`
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
-export const Header = styled.div`
-  position: fixed;
+export const Header = styled.header`
+  position: absolute;
   top: 0;
   width: 100%;
   display: flex;
@@ -43,8 +43,6 @@ export const Header = styled.div`
   font-family: "Copperplate";
 
 `;
-
-
 
 export const HeaderButton = styled.button`
   padding: 10px;
