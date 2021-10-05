@@ -28,6 +28,8 @@ import Rarities from "./styles/Rarities.png"
 import FAQ from "./styles/FAQ.png"
 import styled from "styled-components";
 import { create } from "ipfs-http-client";
+import ImageSlider from "./components/ImageSlider";
+import {SliderData} from "./components/SliderData"
 
 
 const faqData = {
@@ -155,9 +157,10 @@ function App() {
         </s.Container>
         </s.Header>
 
-        <s.Container flex={1} ai={"center"} jc={"center"} style={{marginTop: 80, backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")`}}>
+        <s.Container flex={1} ai={"center"} jc={"center"} style={{ backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")`}}>
           <s.TextTitle style={{alignSelf: "center", marginTop: 100 }}>
-          <img src={Title} alt="About" style={{maxWidth: "100%", maxHeight: "100%"}}/>
+          {/* <img src={Title} alt="About" style={{maxWidth: "100%", maxHeight: "100%"}}/> */}
+          <s.SpacerMedium/>
           </s.TextTitle>
           <CountDownTimer daysHoursMinSecs={daysHoursMinSecs}/>
           <s.SpacerXSmall />
@@ -213,50 +216,26 @@ function App() {
           <img src={banner} alt="Banner" style={{maxWidth: "100%"}}/>
         </s.Container>
 
-        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 80, backgroundColor: "#360368" }}>
+        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 80, backgroundColor: "#001a66" }}>
 
         <s.TextSubTitle style={{alignSelf: "center"}}>
           <img src={About} alt="About" style={{maxWidth: "100%"}}/>
         </s.TextSubTitle>
         <s.Container fd={"row"} jc={"space-between"}>
-          <s.TextDescription><img src={billie} alt="Logo" style={{borderRadius: 20, marginRight: 50, maxWidth: "100%"}}/>
+          <s.TextDescription>
+            <img src={billie} alt="Logo" style={{borderRadius: 20, marginRight: 50, maxWidth: "100%"}}/>
           </s.TextDescription>
           <s.TextDescription>In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
           </s.TextDescription>
         </s.Container>
         </s.ContainerThree>
 
-        <s.ContainerTwo id="rarities" ai={"center"} style={{ marginTop: 40, padding: 80 }}>
+        <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "#1f1f2e" }}>
           <s.TextTitle style={{alignSelf: "center"}}>
             <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/>
-            </s.TextTitle>
-          <svg width={600} height={600}>
-          <VictoryLabel
-            textAnchor="middle"
-            style={{ fontFamily: "Marker felt", fontSize: 20, fill: "white" }}
-            x={300} y={300}
-            text="RARITIES"
-          />
-          <VictoryPie
-            data={[
-              { x: "Visible", y: 6000 },
-              { x: "Hidden", y: 3000 },
-              { x: "Rare", y: 800 },
-              { x: "Mythic", y: 100 },
-            ]}
-            colorScale={["tomato", "orange", "gold", "green", "navy" ]}
-            animate={{
-              duration: 2000
-            }}
-            style={{ labels: { fontFamily: "Marker felt", fontSize: 20, fill: "white"}}}
-            labels={({ datum }) => `${datum.x}`}
-            padding={100}
-            innerRadius={100}
-            labelRadius={220}
-            height={600} width={600}
-          />
-          </svg>
-            <s.SpacerSmall/>
+          </s.TextTitle>
+          <ImageSlider slides={SliderData} />
+          <s.SpacerSmall/>
         </s.ContainerTwo>
 
         <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ marginTop: 40, padding: 90, backgroundColor: "#360368" }}>

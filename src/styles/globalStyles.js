@@ -38,8 +38,7 @@ export const Header = styled.header`
   align-items: ${({ ai }) => (ai ? ai : "center")};
   line-height: 120px;
   height: 100px;
-  background: #360368;
-  color: #fff;
+  background: transparent;
   font-family: "Copperplate";
 
 `;
@@ -49,12 +48,12 @@ export const HeaderButton = styled.button`
   height: 40px;
   width: 90px;
   border-radius: 20px;
-  background: #360368;
+  background: black;
   color: white;
   font-weight: bold;
   font-family: "Copperplate";
   font-size: 15px;
-  border: 2px solid #360368;
+  border: 2px solid black;
 
   &:hover {
     background-color: orange;
@@ -169,7 +168,6 @@ export const ContainerTwo = styled.div`
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(${gradient});
 `;
 
 export const ContainerThree = styled.div`
