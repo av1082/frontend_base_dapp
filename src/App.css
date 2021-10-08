@@ -164,6 +164,7 @@
     font-size: 10px;
     font-weight: 300;
     font-family: "Copperplate";
+    line-height: 2;
   }
 
   div.beyond {
@@ -235,7 +236,7 @@
 
   div.title {
     color: var(--white);
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
     font-family: "Copperplate";
   }
@@ -252,6 +253,7 @@
     font-size: 20px;
     font-weight: 300;
     font-family: "Copperplate";
+    line-height: 1.2;
   }
 
   div.beyond {

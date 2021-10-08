@@ -225,7 +225,7 @@ function App() {
             <img src={logo} alt="Logo" style={{borderRadius: 30, maxWidth: "100%"}}/>
           </div>
           <div style={{display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
-          <div class="description" style={{marginBottom: 20}}>In late 2021, the Billie Universe began to unravel.  A wormhole tore open the fabric of space and time, ripped the Billies from their home and sent them to the Metaverse. The Humans of Earth have finally discovered the secrets of the Metaverse and can now access them through the blockchain. 10,000 Billies lie dormant in this plane waiting to be released. Will you be the hero to free a Billie from the Metaverse?
+          <div class="description" style={{marginBottom: 30}}>In late 2021, the Billie Universe began to unravel.  A wormhole tore open the fabric of space and time, ripped the Billies from their home and sent them to the Metaverse. The Humans of Earth have finally discovered the secrets of the Metaverse and can now access them through the blockchain. 10,000 Billies lie dormant in this plane waiting to be released. Will you be the hero to free a Billie from the Metaverse?
           </div>
 
           <div class="description">
