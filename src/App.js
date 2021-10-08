@@ -49,7 +49,7 @@ const faqData = {
       },
       {
           title: "When will pre-sale happen?",
-          content: "Members who are whitelisted can participate in the pre-sale on October 15.",
+          content: "Members who are whitelisted can participate in the pre-sale on October 23rd.",
       },
       {
           title: "What is the price of one mint?",
@@ -482,6 +482,10 @@ function App() {
 
         <s.SocialsButton href="https://twitter.com/NFTBillies" target="_blank">
         <s.TwitterIcon />
+        </s.SocialsButton>
+
+        <s.SocialsButton href="https://www.instagram.com/thebilliesnft/" target="_blank">
+        <s.Ig />
         </s.SocialsButton>
 
         <s.SocialsButton href="https://discord.gg/ZCY7P55q" target="_blank">
