@@ -253,9 +253,8 @@ function App() {
             <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>10%<break style={{color: "#1f1f2e"}}>"</break>
             </div>
-            </s.Container>
-
             <s.SpacerSmall/>
+            </s.Container>
             <div class="description">1 ether will be given out in rewards and we will be airdropping 10 Billies, only to our whitelisted members.
             </div>
         </s.Container>
@@ -268,8 +267,8 @@ function App() {
             <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>20%<break style={{color: "#1f1f2e"}}>"</break>
             </div>
-            </s.Container>
             <s.SpacerSmall/>
+            </s.Container>
             <div class="description">We will be airdropping 20 Billies randomly, available to all members.
             </div>
         </s.Container>
@@ -283,8 +282,9 @@ function App() {
             <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>30%<break style={{color: "#1f1f2e"}}>"</break>
             </div>
-            </s.Container>
             <s.SpacerSmall/>
+            </s.Container>
+
             <div class="description">30 winners, $15,000 total to be raffled to the community.
             </div>
         </s.Container>
