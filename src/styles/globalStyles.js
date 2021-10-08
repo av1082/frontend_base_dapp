@@ -264,7 +264,7 @@ export const Portfolio = styled(Link45deg)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: rebeccapurple;
+    fill: orange;
   }
 
   &:active {
@@ -278,7 +278,7 @@ export const LinkedIn = styled(LinkedinSquare)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: rebeccapurple;
+    fill: orange;
   }
 
   &:active {
@@ -292,7 +292,7 @@ export const Git = styled(Github)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: rebeccapurple;
+    fill: orange;
   }
 
   &:active {
@@ -306,7 +306,7 @@ export const Ig = styled(Instagram)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: rebeccapurple;
+    fill: orange;
   }
 
   &:active {
@@ -337,7 +337,7 @@ export const Discord = styled(DiscordAlt)`
 export const TwitterIcon = styled(Twitter)`
   position: fixed;
   bottom: 15px;
-  right: 70px;
+  right: 66px;
   border
   width: 50px;
   height: 50px;
