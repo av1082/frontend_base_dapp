@@ -118,10 +118,20 @@
     font-family: "Copperplate";
   }
 
-  div.rocket {
+  div.beyond {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Copperplate";
+  }
+
+  div.countdown {
     color: white;
-    height: 20px;
-    width: 20px;
+    font-size: 20px;
+    font-family: "Monaco";
+    padding: 10;
+    background-color: transparent;
+    font-weight: bold;
   }
 }
 
@@ -147,9 +157,19 @@
     font-family: "Copperplate";
   }
 
-  div.rocket {
+  div.beyond {
+    color: var(--white);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Copperplate";
+  }
+
+  div.countdown {
     color: white;
-    height: 30px;
-    width: 30px;
+    font-size: 50px;
+    font-family: "Monaco";
+    padding: 10;
+    background-color: transparent;
+    font-weight: bold;
   }
 }

@@ -132,7 +132,7 @@ function App() {
   return (
     <s.Screen class="body">
       <s.Header>
-        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{maxWidth: "60%", marginTop: 60}}/>
+        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{maxWidth: "60%", marginTop: 80}}/>
         </s.TextSubTitle>
           <s.Container fd={"row"} ai={"flex-end"} style={{padding: 10}}>
           <Link to="about" spy={true} smooth={true}>
@@ -198,15 +198,14 @@ function App() {
             {claimingNFT ? "BUSY MINTING" : "MINT 10 BILLIES" }
           </s.MintButton> */}
           <s.SpacerSmall/>
-          <s.SpacerSmall />
+
           <s.ConnectButton
             onClick={(e) => {
               e.preventDefault();
               dispatch(connect());
             }}
-            style={{maxWidth: "100%", maxHeight: "100%"}}
           >
-            <s.TextSubTitle>CONNECT</s.TextSubTitle>
+            <div class="subtitle">CONNECT</div>
           </s.ConnectButton>
           <s.SpacerSmall />
 
@@ -216,7 +215,7 @@ function App() {
           <img src={banner} alt="Banner" style={{maxWidth: "100%"}}/>
         </s.Container>
 
-        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 80, backgroundColor: "#001a66" }}>
+        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 60, backgroundColor: "#001a66" }}>
 
         <s.TextSubTitle style={{alignSelf: "center"}}>
           <img src={About} alt="About" style={{maxWidth: "100%"}}/>
@@ -239,7 +238,7 @@ function App() {
           <s.SpacerSmall/> */}
         </s.ContainerTwo>
 
-        <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ marginTop: 40, padding: 90, backgroundColor: "#360368" }}>
+        <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ marginTop: 40, padding: 60, backgroundColor: "#360368" }}>
             <s.TextTitle style={{alignSelf: "center"}}>
               <img src={Roadmap} alt="Roadmap" style={{maxWidth: "100%"}}/>
               </s.TextTitle>
@@ -397,8 +396,8 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}></break>++++<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="beyond" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            beyond
             </div>
             {/* <s.RocketIcon style={{marginLeft: 36, marginRight: 36}}/> */}
             <s.SpacerSmall/>
@@ -425,7 +424,7 @@ function App() {
           <s.SpacerSmall/>
         </s.ContainerFour>
 
-        <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{backgroundColor: "#1f1f2e", padding: 80 }}>
+        <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{backgroundColor: "#1f1f2e", padding: 60 }}>
           <s.TextTitle style={{alignSelf: "center"}}>
             <img src={Team} alt="About" style={{maxWidth: "100%"}}/>
           </s.TextTitle>
@@ -477,7 +476,7 @@ function App() {
           </s.Billies>
         </s.ContainerThree>
 
-        <s.Container id="footer" flex={1} ai={"flex-start"}style={{ padding: 30, backgroundColor: "#360368" }}>
+        <s.Container id="footer" flex={1} ai={"flex-start"} style={{ padding: 30, backgroundColor: "#360368" }}>
         <div class="description">© 2021 The Billies</div>
         </s.Container>
 

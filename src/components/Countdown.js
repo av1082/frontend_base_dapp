@@ -33,7 +33,7 @@ const CountDownTimer = ({daysHoursMinSecs}) => {
 
 
     return (
-        <div style={{color: "red", fontSize: "60px", fontFamily: "Monaco", border: "9px solid black", padding: 10, backgroundColor: "black", borderRadius: 20, fontWeight: "bold"}}>
+        <div class="countdown">
             <p>
               {`${day.toString().padStart(2, '0')}d:${hrs.toString().padStart(2, '0')}h:${mins.toString().padStart(2, '0')}m:${secs.toString().padStart(2, '0')}s`}
             </p>
