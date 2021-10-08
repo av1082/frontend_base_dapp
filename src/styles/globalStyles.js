@@ -90,8 +90,6 @@ function getWidthString(span) {
 }
 
 export const ConnectButton = styled.button`
-  width: 240px;
-  height: 80px;
   max-width: 100%;
   padding: 10px;
   border-radius: 40px;

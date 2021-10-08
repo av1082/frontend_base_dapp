@@ -225,16 +225,16 @@ function App() {
           <s.TextDescription>
             <img src={billie} alt="Logo" style={{borderRadius: 20, marginRight: 50, maxWidth: "100%"}}/>
           </s.TextDescription>
-          <s.TextDescription>In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
-          </s.TextDescription>
+          <div class="description">In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
+          </div>
         </s.Container>
         </s.ContainerThree>
 
         <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "#1f1f2e" }}>
-          <s.TextSubTitle style={{alignSelf: "center"}}>
+          <div class="subtitle" style={{alignSelf: "center"}}>
             {/* <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/> */}
             rarities coming soon!
-          </s.TextSubTitle>
+          </div>
           {/* <ImageSlider slides={SliderData} />
           <s.SpacerSmall/> */}
         </s.ContainerTwo>
@@ -249,30 +249,30 @@ function App() {
 
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.CheckMark />
+            <s.Unchecked />
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>10%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             </s.Container>
 
             <s.SpacerSmall/>
-            <s.TextDescription>1 ether will be given out in rewards and we will be airdropping 10 Billies, only to our whitelisted members.
-            </s.TextDescription>
+            <div class="description">1 ether will be given out in rewards and we will be airdropping 10 Billies, only to our whitelisted members.
+            </div>
         </s.Container>
             <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.CheckMark />
+            <s.Unchecked />
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>20%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             </s.Container>
             <s.SpacerSmall/>
-            <s.TextDescription>We will be airdropping 20 Billies randomly, available to all members.
-            </s.TextDescription>
+            <div class="description">We will be airdropping 20 Billies randomly, available to all members.
+            </div>
         </s.Container>
             <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
@@ -281,13 +281,13 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>30%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             </s.Container>
             <s.SpacerSmall/>
-            <s.TextDescription>30 winners, $15,000 total to be raffled to the community.
-            </s.TextDescription>
+            <div class="description">30 winners, $15,000 total to be raffled to the community.
+            </div>
         </s.Container>
 
         <s.SpacerSmall/>
@@ -297,14 +297,14 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>40%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             <s.SpacerSmall/>
             </s.Container>
 
-            <s.TextDescription>4 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community.
-            </s.TextDescription>
+            <div class="description">4 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community.
+            </div>
         </s.Container>
 
 
@@ -313,13 +313,13 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>50%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>$50,000 donated to a mental health charity. The charity will be picked by our community.
-            </s.TextDescription>
+            <div class="description">$50,000 donated to a mental health charity. The charity will be picked by our community.
+            </div>
         </s.Container>
 
         <s.SpacerSmall/>
@@ -327,13 +327,13 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>60%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>600 free merchandise of your favorite Billie NFT! Merchandise type will be voted by community.
-            </s.TextDescription>
+            <div class="description">600 free merchandise of your favorite Billie NFT! Merchandise type will be voted by community.
+            </div>
         </s.Container>
 
         <s.SpacerSmall/>
@@ -341,13 +341,13 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>70%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>7 Billie holders will have the chance to design their own Billie! Each one of these NFTs will be given rare attributes.
-            </s.TextDescription>
+            <div class="description">7 Billie holders will have the chance to design their own Billie! Each one of these NFTs will be given rare attributes.
+            </div>
         </s.Container>
 
         <s.SpacerSmall/>
@@ -355,13 +355,13 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>80%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>8 Billie holders will be given concert tickets to the Happier Than Ever, The World Tour.
-            </s.TextDescription>
+            <div class="description">8 Billie holders will be given concert tickets to the Happier Than Ever, The World Tour.
+            </div>
         </s.Container>
 
         <s.SpacerSmall/>
@@ -369,13 +369,13 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
             <break style={{color: "#1f1f2e"}}>"</break>90%<break style={{color: "#1f1f2e"}}>"</break>
-            </s.TextSubTitle>
+            </div>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>9 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community.
-            </s.TextDescription>
+            <div class="description">9 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community.
+            </div>
         </s.Container>
 
         <s.SpacerSmall/>
@@ -383,13 +383,13 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
               100%
-            </s.TextSubTitle>
+            </div>
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>50% of ALL royalty proceeds be either distributed to current Billie holders OR be used to SWEEP the floor price.  Voted by the ccommunity! Which will you choose?
-            </s.TextDescription>
+            <div class="description">50% of ALL royalty proceeds be either distributed to current Billie holders OR be used to SWEEP the floor price.  Voted by the ccommunity! Which will you choose?
+            </div>
         </s.Container>
 
         <s.SpacerSmall/>
@@ -397,13 +397,14 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Unchecked/>
             <s.SpacerSmall/>
-            <s.TextSubTitle style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <s.RocketIcon style={{marginLeft: 36, marginRight: 36}}/>
-            </s.TextSubTitle>
+            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
+            <break style={{color: "#1f1f2e"}}></break>++++<break style={{color: "#1f1f2e"}}>"</break>
+            </div>
+            {/* <s.RocketIcon style={{marginLeft: 36, marginRight: 36}}/> */}
             <s.SpacerSmall/>
           </s.Container>
-            <s.TextDescription>In addition to sharing in the royalties, holders will also be rewarded with Billie Coins. We will partner up with developers to create a liquidity pool and generate passive income!
-            </s.TextDescription>
+            <div class="description">In addition to sharing in the royalties, holders will also be rewarded with Billie Coins. We will partner up with developers to create a liquidity pool and generate passive income!
+            </div>
         </s.Container>
         </s.Container>
         </s.Container>
@@ -477,7 +478,7 @@ function App() {
         </s.ContainerThree>
 
         <s.Container id="footer" flex={1} ai={"flex-start"}style={{ padding: 30, backgroundColor: "#360368" }}>
-        <s.TextDescription>© 2021 The Billies</s.TextDescription>
+        <div class="description">© 2021 The Billies</div>
         </s.Container>
 
         <s.SocialsButton href="https://twitter.com/NFTBillies" target="_blank">
