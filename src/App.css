@@ -97,6 +97,54 @@
 }
 
 @media screen and (max-width: 600px) {
+  div.about {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #001a66;
+    background-size: cover;
+    background-position: center;
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+  }
+
+  div.roadmap {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    background-color: #360368;
+  }
+
+  div.faq {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    background-image: url("./styles/gradientTwo.jpeg");
+    font-family: Copperplate;
+  }
+
+  div.team {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    background-color: #1f1f2e;
+    background-size: cover;
+    background-position: center;
+  }
+
   div.title {
     color: var(--white);
     font-size: 40px;
@@ -136,6 +184,55 @@
 }
 
 @media screen and (min-width: 601px) {
+  div.about {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-bottom: 8%;
+    background-color: #001a66;
+  }
+
+  div.roadmap {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8%;
+    background-color: #360368;
+  }
+
+  div.faq {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+    background-image: url("./styles/gradientTwo.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    font-family: Copperplate;
+  }
+
+  div.team {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+    background-color: #1f1f2e;
+    background-size: cover;
+    background-position: center;
+  }
+
   div.title {
     color: var(--white);
     font-size: 80px;

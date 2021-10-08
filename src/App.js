@@ -14,8 +14,8 @@ import logo from "./styles/Billie.gif"
 import billie from "./styles/BillieDrawing.png"
 import billieIcon from "./styles/BillieLogo.png"
 import billieTitle from "./styles/BillieTitle.png"
-import Anna from "./styles/Anna.png"
-import Kleidi from "./styles/Kleidi.png"
+import Anna from "./styles/Anna.jpg"
+import Kleidi from "./styles/Kleidi.jpg"
 import Gilmo from "./styles/Gilmo.png"
 import Untai from "./styles/Untai.png"
 import banner from "./styles/Banner.png"
@@ -64,14 +64,14 @@ const faqData = {
 
 const faqStyles = {
   bgColor: "transparent",
-  fontFamily: "Marker felt",
+  fontFamily: "Copperplate",
   rowContentTextSize: "20px",
   rowTitleColor: "white",
   rowTitleTextSize: "30px",
   rowContentColor: 'white',
   arrowColor: "orange",
   rowContentPaddingTop: "10px",
-  rowContentPaddingBottom: "10px",
+  rowContentPaddingBottom: "20px",
 };
 
 const faqConfig = {
@@ -215,19 +215,19 @@ function App() {
           <img src={banner} alt="Banner" style={{maxWidth: "100%"}}/>
         </s.Container>
 
-        <s.ContainerThree id="about" flex={1} ai={"center"} jc={"space-between"} style={{ padding: 60, backgroundColor: "#001a66" }}>
+        <div id="about" class="about">
 
         <s.TextSubTitle style={{alignSelf: "center"}}>
           <img src={About} alt="About" style={{maxWidth: "100%"}}/>
         </s.TextSubTitle>
-        <s.Container fd={"row"} jc={"space-between"}>
-          <s.TextDescription>
-            <img src={billie} alt="Logo" style={{borderRadius: 20, marginRight: 50, maxWidth: "100%"}}/>
-          </s.TextDescription>
+        <s.Container flex={1} fd={"row"} ai={"center"} jc={"flex-start"}>
+          <div style={{marginRight: 60}}>
+            <img src={logo} alt="Logo" style={{borderRadius: 30, maxWidth: "100%"}}/>
+          </div>
           <div class="description">In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
           </div>
         </s.Container>
-        </s.ContainerThree>
+        </div>
 
         <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "#1f1f2e" }}>
           <div class="subtitle" style={{alignSelf: "center"}}>
@@ -238,7 +238,7 @@ function App() {
           <s.SpacerSmall/> */}
         </s.ContainerTwo>
 
-        <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ marginTop: 40, padding: 60, backgroundColor: "#360368" }}>
+        <div id="roadmap" class="roadmap">
             <s.TextTitle style={{alignSelf: "center"}}>
               <img src={Roadmap} alt="Roadmap" style={{maxWidth: "100%"}}/>
               </s.TextTitle>
@@ -406,9 +406,9 @@ function App() {
             </div>
         </s.Container>
         </s.Container>
-        </s.Container>
+        </div>
 
-        <s.ContainerFour id="faq" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{padding: 80}}>
+        <div id="faq" class="faq">
           <s.TextTitle>
             <img src={FAQ} alt="FAQ" style={{maxWidth: "100%"}}/>
           </s.TextTitle>
@@ -422,9 +422,9 @@ function App() {
           </s.Container>
 
           <s.SpacerSmall/>
-        </s.ContainerFour>
+        </div>
 
-        <s.ContainerThree id="team" flex={1} fd={"column"} ai={"center"} jc={"center"} style={{backgroundColor: "#1f1f2e", padding: 60 }}>
+        <div id="team" class="team">
           <s.TextTitle style={{alignSelf: "center"}}>
             <img src={Team} alt="About" style={{maxWidth: "100%"}}/>
           </s.TextTitle>
@@ -474,7 +474,7 @@ function App() {
             </s.TextDescription>
 
           </s.Billies>
-        </s.ContainerThree>
+        </div>
 
         <s.Container id="footer" flex={1} ai={"flex-start"} style={{ padding: 30, backgroundColor: "#360368" }}>
         <div class="description">© 2021 The Billies</div>
