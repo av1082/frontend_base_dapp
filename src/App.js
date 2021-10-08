@@ -80,7 +80,7 @@ const faqConfig = {
   tabFocus: true
 };
 
-const deadline = '2021-10-16';
+const deadline = '2021-10-23';
 
 function getTimeRemaining(endtime){
   const total = Date.parse(endtime) - Date.parse(new Date());
