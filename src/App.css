@@ -139,7 +139,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5%;
+    padding: 7%;
     background-color: #1f1f2e;
     background-size: cover;
     background-position: center;
@@ -164,7 +164,9 @@
     font-size: 10px;
     font-weight: 300;
     font-family: "Copperplate";
-    line-height: 2;
+    line-height: 1.1;
+    text-align: justify;
+    word-break: keep-all;
   }
 
   div.beyond {
@@ -254,6 +256,8 @@
     font-weight: 300;
     font-family: "Copperplate";
     line-height: 1.2;
+    text-align: justify;
+    word-break: keep-all;
   }
 
   div.beyond {
