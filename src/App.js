@@ -224,12 +224,18 @@ function App() {
           <div style={{marginRight: 60}}>
             <img src={logo} alt="Logo" style={{borderRadius: 30, maxWidth: "100%"}}/>
           </div>
-          <div class="description">In late 2021, the Billie Universes began to unravel.  A wormhole tore open the fabric of space and time and ripped the Billies from their home and sent them to the Metaverse.  Humans of Earth have finally discovered the secrets of the Metaverse and can not access it through the blockchain. 10,000 Billies lie dormant in this plane waiting for the Humans of Earth.  Will you be the hero to release a Billie from the Metaverse?
+          <div style={{display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
+          <div class="description" style={{marginBottom: 20}}>In late 2021, the Billie Universe began to unravel.  A wormhole tore open the fabric of space and time, ripped the Billies from their home and sent them to the Metaverse. The Humans of Earth have finally discovered the secrets of the Metaverse and can now access them through the blockchain. 10,000 Billies lie dormant in this plane waiting to be released. Will you be the hero to free a Billie from the Metaverse?
+          </div>
+
+          <div class="description">
+            Every Billie minted is created algorythmically through the ERC-721 token. No two Billies are the same. Once minted, each Billie will live on the blockchain indefinitely and cannot be altered.
+          </div>
           </div>
         </s.Container>
         </div>
 
-        <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "#1f1f2e" }}>
+        <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "black" }}>
           <div class="subtitle" style={{alignSelf: "center"}}>
             {/* <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/> */}
             rarities coming soon!

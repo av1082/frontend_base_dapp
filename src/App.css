@@ -103,7 +103,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #001a66;
+    background-color: #1f1f2e;
     background-size: cover;
     background-position: center;
     padding-top: 2%;
@@ -194,7 +194,7 @@
     padding-right: 8%;
     padding-left: 8%;
     padding-bottom: 8%;
-    background-color: #001a66;
+    background-color: #1f1f2e;
   }
 
   div.roadmap {
