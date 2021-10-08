@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
+import * as s from "../styles/globalStyles";
 import { SliderData } from './SliderData'
 import { ArrowLeftCircle } from '@styled-icons/bootstrap'
 import { ArrowRightCircle } from '@styled-icons/bootstrap'
@@ -45,7 +46,16 @@ const ImageSlider = ({slides}) => {
   }
 
   return (
+    <div>
       <section className="slider">
+        <div>
+      <s.HeaderButton className="button">
+        Rare
+      </s.HeaderButton>
+      <s.HeaderButton>
+        Mythic
+      </s.HeaderButton>
+      </div>
         <LeftArrow style={{fontSize: "10px"}}className="left-arrow" onClick={prevSlide}/>
         <RightArrow className="right-arrow" onClick={nextSlide}/>
         {SliderData.map((slide, index) => {
@@ -58,7 +68,7 @@ const ImageSlider = ({slides}) => {
           )
         })}
       </section>
-
+    </div>
   )
 }
 

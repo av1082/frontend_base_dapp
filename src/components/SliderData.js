@@ -9,27 +9,35 @@ import UfoNecklace from "../images/UfoNecklace.png"
 
 export const SliderData = [
   {
-    image: BitcoinNecklace
+    image: BitcoinNecklace,
+    rarity: "rare"
   },
   {
-    image: BrainsHair
+    image: BrainsHair,
+    rarity: "rare"
   },
   {
-    image: CrazyEyes
+    image: CrazyEyes,
+    rarity: "rare"
   },
   {
-    image: DrakeShirt
+    image: DrakeShirt,
+    rarity: "rare"
   },
   {
-    image: LaserEyes
+    image: LaserEyes,
+    rarity: "mythic"
   },
   {
-    image: JasonEyes
+    image: JasonEyes,
+    rarity: "mythic"
   },
   {
-    image: MedusaHair
+    image: MedusaHair,
+    rarity: "mythic"
   },
   {
-    image: UfoNecklace
+    image: UfoNecklace,
+    rarity: "mythic"
   },
 ];

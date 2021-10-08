@@ -139,9 +139,9 @@ function App() {
           <s.HeaderButton>About</s.HeaderButton>
           </Link>
 
-          <Link to="rarities" spy={true} smooth={true}>
+          {/* <Link to="rarities" spy={true} smooth={true}>
           <s.HeaderButton>Rarities</s.HeaderButton>
-          </Link>
+          </Link> */}
 
           <Link to="roadmap" spy={true} smooth={true}>
           <s.HeaderButton>Roadmap</s.HeaderButton>
@@ -231,11 +231,12 @@ function App() {
         </s.ContainerThree>
 
         <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "#1f1f2e" }}>
-          <s.TextTitle style={{alignSelf: "center"}}>
-            <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/>
-          </s.TextTitle>
-          <ImageSlider slides={SliderData} />
-          <s.SpacerSmall/>
+          <s.TextSubTitle style={{alignSelf: "center"}}>
+            {/* <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/> */}
+            rarities coming soon!
+          </s.TextSubTitle>
+          {/* <ImageSlider slides={SliderData} />
+          <s.SpacerSmall/> */}
         </s.ContainerTwo>
 
         <s.Container id="roadmap" flex={1} ai={"center"} jc={"center"} style={{ marginTop: 40, padding: 90, backgroundColor: "#360368" }}>
