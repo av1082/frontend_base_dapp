@@ -11,8 +11,7 @@ import CountDownTimer from './components/Countdown'
 
 import * as s from "./styles/globalStyles";
 import logo from "./styles/Billie.gif"
-import billie from "./styles/BillieDrawing.png"
-import billieIcon from "./styles/BillieLogo.png"
+import background from "./styles/Background.jpg"
 import billieTitle from "./styles/BillieTitle.png"
 import Anna from "./styles/Anna.jpg"
 import Kleidi from "./styles/Kleidi.jpg"
@@ -131,10 +130,8 @@ function App() {
 
   return (
     <s.Screen class="body">
-      <s.Header>
-        <s.TextSubTitle><img src={billieTitle} alt="Icon" style={{maxWidth: "60%", marginTop: 80}}/>
-        </s.TextSubTitle>
-          <s.Container fd={"row"} ai={"flex-end"} style={{padding: 10}}>
+      <s.Header fd={"row"} ai={"center"} jc={"flex-end"} style={{padding: 20}}>
+
           <Link to="about" spy={true} smooth={true}>
           <s.HeaderButton>About</s.HeaderButton>
           </Link>
@@ -154,14 +151,13 @@ function App() {
           <Link to="team" spy={true} smooth={true}>
           <s.HeaderButton>Team</s.HeaderButton>
           </Link>
-        </s.Container>
+
         </s.Header>
 
-        <s.Container flex={1} ai={"center"} jc={"center"} style={{ backgroundImage: `url("https://cdn.wallpapersafari.com/82/47/psdSje.jpg")`}}>
-          <s.TextTitle style={{alignSelf: "center", marginTop: 100 }}>
-          {/* <img src={Title} alt="About" style={{maxWidth: "100%", maxHeight: "100%"}}/> */}
-          <s.SpacerMedium/>
-          </s.TextTitle>
+        <s.Container flex={1} ai={"center"} jc={"center"} style={{ backgroundImage: `url(${background})`}}>
+          <s.Container><img src={billieTitle} alt="Icon" ai={"center"} jc={"center"} style={{alignSelf: "center", maxWidth: "60%", marginTop: 140}}/>
+        </s.Container>
+        <s.SpacerSmall/>
           <CountDownTimer daysHoursMinSecs={daysHoursMinSecs}/>
           <s.SpacerXSmall />
           <s.TextDescription style={{ textAlign: "center" }}>

@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import gradient from "./gradient.jpeg";
-import gradientTwo from "./gradientTwo.jpeg";
 import {CheckCircle} from '@styled-icons/bootstrap/CheckCircle';
 import {Circle} from '@styled-icons/bootstrap/Circle';
 import {Rocket} from '@styled-icons/ionicons-sharp/Rocket';
@@ -45,15 +43,13 @@ export const Header = styled.header`
 
 export const HeaderButton = styled.button`
   padding: 10px;
-  height: 40px;
-  width: 90px;
   border-radius: 20px;
-  background: black;
+  background: transparent;
   color: white;
   font-weight: bold;
   font-family: "Copperplate";
   font-size: 15px;
-  border: 2px solid black;
+  border: 2px solid transparent;
 
   &:hover {
     background-color: orange;
@@ -154,6 +150,8 @@ export const Container = styled.div`
   background-color: ${({ test }) => (test ? "pink" : "none")};
   width: 100%;
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
+  background-size: cover;
+  background-position: center;
 `;
 
 export const ContainerTwo = styled.div`
@@ -168,33 +166,7 @@ export const ContainerTwo = styled.div`
   background-position: center;
 `;
 
-export const ContainerThree = styled.div`
-  display: flex;
-  flex: ${({ flex }) => (flex ? flex : 0)};
-  flex-direction: ${({ fd }) => (fd ? fd : "column")};
-  justify-content: ${({ jc }) => (jc ? jc : "flex-start")};
-  align-items: ${({ ai }) => (ai ? ai : "flex-start")};
-  background-color: ${({ test }) => (test ? "pink" : "none")};
-  width: 100%;
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-size: cover;
-  background-position: center;
-`;
 
-export const ContainerFour = styled.div`
-  display: flex;
-  flex: ${({ flex }) => (flex ? flex : 0)};
-  flex-direction: ${({ fd }) => (fd ? fd : "column")};
-  justify-content: ${({ jc }) => (jc ? jc : "flex-start")};
-  align-items: ${({ ai }) => (ai ? ai : "flex-start")};
-  background-color: ${({ test }) => (test ? "pink" : "none")};
-  width: 100%;
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-size: cover;
-  background-position: center;
-  background-image: url(${gradientTwo});
-  font-family: "Copperplate";
-`;
 
 export const Billies = styled.p`
 margin-top: 20px;
