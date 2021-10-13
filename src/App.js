@@ -479,7 +479,7 @@ function App() {
         </div>
 
         <s.Container id="footer" flex={1} ai={"flex-start"} style={{ padding: 30, backgroundColor: "#360368" }}>
-        <div class="description">© 2021 The Billies</div>
+        <div class="description">© 2021 CryptoBillies</div>
         </s.Container>
 
         <s.SocialsButton href="https://twitter.com/NFTBillies" target="_blank">
