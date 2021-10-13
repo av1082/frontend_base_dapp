@@ -486,7 +486,7 @@ function App() {
         <s.TwitterIcon />
         </s.SocialsButton>
 
-        <s.SocialsButton href="https://www.instagram.com/thebilliesnft/" target="_blank">
+        <s.SocialsButton href="https://www.instagram.com/cryptobillies/" target="_blank">
         <s.Ig style={{position: "fixed", right: "120px", bottom: "15px"}}/>
         </s.SocialsButton>
 
