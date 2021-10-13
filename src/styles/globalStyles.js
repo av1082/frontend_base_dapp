@@ -11,19 +11,7 @@ import {Twitter} from '@styled-icons/boxicons-logos/Twitter'
 
 
 // Used for wrapping a page component
-export const Screen = styled.div`
-  background-color: #360368;
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-size: cover;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-`;
+
 
 export const Header = styled.header`
   position: absolute;
@@ -43,19 +31,13 @@ export const Header = styled.header`
 
 export const HeaderButton = styled.button`
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 15px;
   background: transparent;
   color: white;
-  font-weight: bold;
+  font-weight: 300;
   font-family: "Copperplate";
   font-size: 15px;
   border: 2px solid transparent;
-
-  &:hover {
-    background-color: orange;
-    border: 2px solid orange;
-  }
-
 `;
 
 export const MintButton = styled.button`
@@ -88,17 +70,18 @@ function getWidthString(span) {
 export const ConnectButton = styled.button`
   max-width: 100%;
   padding: 10px;
-  border-radius: 40px;
-  background: orange;
+  border-radius: 20px;
+  background: transparent;
   color: white;
   font-weight: bold;
   font-family: "Copperplate";
-  border: 2px solid orange;
+  border: 2px solid #00e600;
 
   &:hover {
-    background-color: #ffe0b3;
-    border: 2px solid #ffe0b3;
+    background-color: gray;
+    border: 2px solid #00e600;
   }
+
   &:focus {
     opacity: 0.2;
   }
@@ -193,7 +176,7 @@ export const TextSubTitle = styled.p`
 
 export const TextDescription = styled.p`
   color: var(--white);
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 300;
   font-family: "Copperplate";
 `;
@@ -234,12 +217,9 @@ export const Portfolio = styled(Link45deg)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: orange;
+    fill: #00e600;
   }
 
-  &:active {
-    fill: #e6ffb3;
-  }
 `;
 
 export const LinkedIn = styled(LinkedinSquare)`
@@ -248,12 +228,9 @@ export const LinkedIn = styled(LinkedinSquare)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: orange;
+    fill: #00e600;
   }
 
-  &:active {
-    fill: #ff9999;
-  }
 `;
 
 export const Git = styled(Github)`
@@ -262,12 +239,9 @@ export const Git = styled(Github)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: orange;
+    fill: #00e600;
   }
 
-  &:active {
-    fill: #ffff99;
-  }
 `;
 
 export const Ig = styled(Instagram)`
@@ -276,12 +250,9 @@ export const Ig = styled(Instagram)`
   transition: fill 0.25s;
 
   &:hover {
-    fill: orange;
+    fill: #00e600;
   }
 
-  &:active {
-    fill: #ff99ff;
-  }
 `;
 
 export const Discord = styled(DiscordAlt)`
@@ -296,12 +267,10 @@ export const Discord = styled(DiscordAlt)`
 
 
   &:hover {
-    fill: orange;
+    fill: #00e600;
   }
 
-  &:active {
-    fill: #ff99ff;
-  }
+
 `;
 
 export const TwitterIcon = styled(Twitter)`
@@ -316,10 +285,7 @@ export const TwitterIcon = styled(Twitter)`
 
 
   &:hover {
-    fill: orange;
+    fill: #00e600;
   }
 
-  &:active {
-    fill: #ff99ff;
-  }
 `;
