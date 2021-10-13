@@ -68,7 +68,7 @@ const faqStyles = {
   rowTitleColor: "white",
   rowTitleTextSize: "30px",
   rowContentColor: 'white',
-  arrowColor: "orange",
+  arrowColor: "#00e600",
   rowContentPaddingTop: "10px",
   rowContentPaddingBottom: "20px",
 };
@@ -79,7 +79,7 @@ const faqConfig = {
   tabFocus: true
 };
 
-const deadline = '2021-10-23';
+const deadline = '2021-10-31';
 
 function getTimeRemaining(endtime){
   const total = Date.parse(endtime) - Date.parse(new Date());
@@ -129,40 +129,62 @@ function App() {
   }, [blockchain.smartContract, dispatch]);
 
   return (
-    <s.Screen class="body">
-      <s.Header fd={"row"} ai={"center"} jc={"flex-end"} style={{padding: 20}}>
+    <div class="body">
+      <div class="header">
+          <div>
+            <div class="subtitle">
+              <span style={{color: "gray"}}>CRYPTO</span><span style={{color: "#00e600"}}>BILLIES</span>
+            </div>
+          </div>
 
-          <Link to="about" spy={true} smooth={true}>
-          <s.HeaderButton>About</s.HeaderButton>
-          </Link>
+          <div style={{display: "flex", flexDirection: "row", alignSelf: "flex-end", justifyContent: "space-between"}}>
+            <div>
+              <Link to="about" spy={true} smooth={true}>
+              <s.HeaderButton>About</s.HeaderButton>
+              </Link>
+            </div>
 
-          {/* <Link to="rarities" spy={true} smooth={true}>
-          <s.HeaderButton>Rarities</s.HeaderButton>
-          </Link> */}
+            {/* <Link to="rarities" spy={true} smooth={true}>
+            <s.HeaderButton>Rarities</s.HeaderButton>
+            </Link> */}
+            <div>
+              <Link to="roadmap" spy={true} smooth={true}>
+              <s.HeaderButton>Roadmap</s.HeaderButton>
+              </Link>
+            </div>
+            <div>
+              <Link to="faq" spy={true} smooth={true}>
+              <s.HeaderButton>FAQ </s.HeaderButton>
+              </Link>
+            </div>
+            <div>
+              <Link to="team" spy={true} smooth={true}>
+              <s.HeaderButton>Team</s.HeaderButton>
+              </Link>
+            </div>
+          </div>
+        </div>
 
-          <Link to="roadmap" spy={true} smooth={true}>
-          <s.HeaderButton>Roadmap</s.HeaderButton>
-          </Link>
+        <s.Container flex={1} ai={"flex-start"} jc={"flex-start"}>
 
-          <Link to="faq" spy={true} smooth={true}>
-          <s.HeaderButton>FAQ </s.HeaderButton>
-          </Link>
-
-          <Link to="team" spy={true} smooth={true}>
-          <s.HeaderButton>Team</s.HeaderButton>
-          </Link>
-
-        </s.Header>
-
-        <s.Container flex={1} ai={"center"} jc={"center"} style={{ backgroundImage: `url(${background})`}}>
-          <s.Container><img src={billieTitle} alt="Icon" ai={"center"} jc={"center"} style={{alignSelf: "center", maxWidth: "60%", marginTop: 140}}/>
-        </s.Container>
-        <s.SpacerSmall/>
+        <s.SpacerLarge/>
+        <div style={{paddingLeft: 60, paddingRight: 60, paddingTop: 20}}>
+          <div class="title">ten thousand billies living in the metaverse</div>
+          <s.SpacerSmall/>
+          <s.SpacerSmall/>
+          <s.SpacerSmall/>
+          <div style={{display: "flex", flexDirection: "column", alignSelf: "center"}}>
+          <div class="subtitle">coming soon...</div>
+          <s.SpacerSmall/>
+          <div>
           <CountDownTimer daysHoursMinSecs={daysHoursMinSecs}/>
+            </div>
           <s.SpacerXSmall />
-          <s.TextDescription style={{ textAlign: "center" }}>
+          <div>
+          <s.TextDescription>
             {feedback}
           </s.TextDescription>
+          </div>
           <s.SpacerSmall />
           {/* <s.MintButton
           disabled={claimingNFT ? 1 : 0}
@@ -194,28 +216,30 @@ function App() {
             {claimingNFT ? "BUSY MINTING" : "MINT 10 BILLIES" }
           </s.MintButton> */}
           <s.SpacerSmall/>
-
+          <div style={{alignSelf: "center"}}>
           <s.ConnectButton
             onClick={(e) => {
               e.preventDefault();
               dispatch(connect());
             }}
           >
-            <div class="subtitle">CONNECT</div>
+            <div class="subtitle" style={{color: "white"}}>CONNECT</div>
           </s.ConnectButton>
+          </div>
+          </div>
           <s.SpacerSmall />
 
           {blockchain.errorMsg !== "" ? (
             <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
           ) : null}
+
+          </div>
           <img src={banner} alt="Banner" style={{maxWidth: "100%"}}/>
         </s.Container>
 
         <div id="about" class="about">
 
-        <s.TextSubTitle style={{alignSelf: "center"}}>
-          <img src={About} alt="About" style={{maxWidth: "100%"}}/>
-        </s.TextSubTitle>
+        <div class="subtitle" style={{marginBottom: 40}}>METAVERSE</div>
         <s.Container flex={1} fd={"row"} ai={"center"} jc={"flex-start"}>
           <div style={{marginRight: 60}}>
             <img src={logo} alt="Logo" style={{borderRadius: 30, maxWidth: "100%"}}/>
@@ -241,19 +265,17 @@ function App() {
         </s.ContainerTwo>
 
         <div id="roadmap" class="roadmap">
-            <s.TextTitle style={{alignSelf: "center"}}>
-              <img src={Roadmap} alt="Roadmap" style={{maxWidth: "100%"}}/>
-              </s.TextTitle>
+            <div class="subtitle">ROADMAP</div>
             <s.SpacerMedium />
 
         <s.Container>
 
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked />
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>10%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [10%]
             </div>
             <s.SpacerSmall/>
             </s.Container>
@@ -264,10 +286,10 @@ function App() {
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked />
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>20%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [20%]
             </div>
             <s.SpacerSmall/>
             </s.Container>
@@ -279,10 +301,10 @@ function App() {
 
 
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>30%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [30%]
             </div>
             <s.SpacerSmall/>
             </s.Container>
@@ -296,10 +318,10 @@ function App() {
 
 
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>40%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [40%]
             </div>
             <s.SpacerSmall/>
             </s.Container>
@@ -312,10 +334,10 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>50%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [50%]
             </div>
             <s.SpacerSmall/>
           </s.Container>
@@ -326,10 +348,10 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>60%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [60%]
             </div>
             <s.SpacerSmall/>
           </s.Container>
@@ -340,10 +362,10 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>70%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [70%]
             </div>
             <s.SpacerSmall/>
           </s.Container>
@@ -354,10 +376,10 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>80%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [80%]
             </div>
             <s.SpacerSmall/>
           </s.Container>
@@ -368,10 +390,10 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            <break style={{color: "#1f1f2e"}}>"</break>90%<break style={{color: "#1f1f2e"}}>"</break>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            [90%]
             </div>
             <s.SpacerSmall/>
           </s.Container>
@@ -382,10 +404,10 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-              100%
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, borderRadius: 10, boxShadow: 20}}>
+              [100%]
             </div>
             <s.SpacerSmall/>
           </s.Container>
@@ -396,12 +418,12 @@ function App() {
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
-            <s.Unchecked/>
+
             <s.SpacerSmall/>
-            <div class="beyond" style={{backgroundColor: "#1f1f2e", padding: 20, marginRight: 24, borderRadius: 10, boxShadow: 20}}>
-            beyond
+            <div class="beyond" style={{backgroundColor: "transparent", padding: 20, borderRadius: 10, boxShadow: 20}}>
+            [beyond]
             </div>
-            {/* <s.RocketIcon style={{marginLeft: 36, marginRight: 36}}/> */}
+
             <s.SpacerSmall/>
           </s.Container>
             <div class="description">In addition to sharing in the royalties, holders will also be rewarded with Billie Coins. We will partner up with developers to create a liquidity pool and generate passive income!
@@ -411,10 +433,10 @@ function App() {
         </div>
 
         <div id="faq" class="faq">
-          <s.TextTitle>
-            <img src={FAQ} alt="FAQ" style={{maxWidth: "100%"}}/>
-          </s.TextTitle>
-          <s.SpacerSmall/>
+          <div class="subtitle">
+            FAQ IT UP!
+          </div>
+          <s.SpacerMedium />
           <s.Container >
           <Faq
           data={faqData}
@@ -427,27 +449,28 @@ function App() {
         </div>
 
         <div id="team" class="team">
-          <s.TextTitle style={{alignSelf: "center"}}>
-            <img src={Team} alt="About" style={{maxWidth: "100%"}}/>
-          </s.TextTitle>
-          <s.SpacerSmall />
+          <div class="subtitle">
+            TEAM
+          </div>
+          <s.SpacerMedium />
 
           <s.Billies ai={"center"} style={{flexWrap: "wrap"}}>
 
             <s.TextDescription>
-              <img src={Kleidi} alt="Logo" style={ {borderRadius: 150, border: "2px solid black", boxShadow: "3px 3px black", width: 300, height: 300}}/>
+              <img src={Kleidi} alt="Logo" style={ {borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription style={{textAlign: "center", color: "black", backgroundColor: "#ff9999", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Kleidi
-              <p>Director of Operations</p>
+              <s.TextDescription style={{color: "white", backgroundColor: "transparent", padding: 10}}>Kleidi
+              <p style={{fontSize: 25}}>Project Lead</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.linkedin.com/in/kleidimico/" target="_blank">
               <s.LinkedIn/>
               </s.SocialsButton>
             </s.TextDescription>
 
-            <s.TextDescription><img src={Untai} alt="Logo" style={ {borderRadius: 150, border: "2px solid black", boxShadow: "3px 3px black", width: 300, height: 300}}/>
+            <s.TextDescription>
+            <img src={Untai} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{textAlign: "center", color: "black", backgroundColor: "#e6ffb3", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black" }}>Untai
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>Untai
               <p>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.untaikisah.com/" target="_blank">
@@ -455,9 +478,10 @@ function App() {
               </s.SocialsButton>
             </s.TextDescription>
 
-            <s.TextDescription><img src={Gilmo} alt="Logo" style={ {borderRadius: 150, border: "2px solid black", boxShadow: "3px 3px black", width: 300, height: 300}}/>
+            <s.TextDescription>
+            <img src={Gilmo} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{textAlign: "center", color: "black", backgroundColor: "#ff99ff", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Pacomang
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>Pacomang
               <p>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.instagram.com/papacocomama/" target="_blank">
@@ -465,9 +489,10 @@ function App() {
               </s.SocialsButton>
             </s.TextDescription>
 
-            <s.TextDescription><img src={Anna} alt="Logo" style={ {borderRadius: 150, border: "2px solid black", boxShadow: "3px 3px black", width: 300, height: 300}}/>
+            <s.TextDescription>
+            <img src={Anna} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{textAlign: "center", color: "black", backgroundColor: "#ffff99", padding: 10, borderRadius: 10, border: "2px solid black", boxShadow: "2px 2px black"}}>Anya
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>Anya
               <p>Developer</p>
               </s.TextDescription>
               <s.SocialsButton href="https://github.com/av1082" target="_blank">
@@ -478,7 +503,7 @@ function App() {
           </s.Billies>
         </div>
 
-        <s.Container id="footer" flex={1} ai={"flex-start"} style={{ padding: 30, backgroundColor: "#360368" }}>
+        <s.Container id="footer" flex={1} ai={"flex-start"} style={{ padding: 30}}>
         <div class="description">© 2021 CryptoBillies</div>
         </s.Container>
 
@@ -493,7 +518,7 @@ function App() {
         <s.SocialsButton href="https://discord.gg/ZCY7P55q" target="_blank">
         <s.Discord />
         </s.SocialsButton>
-    </s.Screen>
+    </div>
   );
 }
 
