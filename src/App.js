@@ -167,14 +167,14 @@ function App() {
 
 
         <s.Container flex={1} ai={"flex-start"} jc={"flex-start"} style={{borderBottom: "0.5em solid #00e600"}}>
-        <div style={{marginTop: 60, marginLeft: 60}}>
+        <div style={{marginTop: 60, marginLeft: "5%"}}>
             <div class="subtitle">
               <span style={{color: "gray"}}>CRYPTO</span><span style={{color: "#00e600"}}>BILLIES</span>
             </div>
         </div>
         <s.SpacerMedium/>
 
-        <div style={{paddingLeft: 60, paddingRight: 60, paddingTop: 20}}>
+        <div style={{paddingLeft: "5%", paddingRight: 60, paddingTop: 20}}>
           <div class="title">ten thousand billies living in the metaverse</div>
           <s.SpacerSmall/>
           <s.SpacerSmall/>
