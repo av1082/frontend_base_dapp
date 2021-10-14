@@ -131,13 +131,13 @@ function App() {
   return (
     <div class="body">
       <div class="header">
-          <div>
+          {/* <div>
             <div class="subtitle">
               <span style={{color: "gray"}}>CRYPTO</span><span style={{color: "#00e600"}}>BILLIES</span>
             </div>
-          </div>
+          </div> */}
 
-          <div style={{display: "flex", flexDirection: "row", alignSelf: "flex-end", justifyContent: "space-between"}}>
+          <div style={{display: "flex", flexDirection: "row", alignSelf: "flex-end", justifyContent: "space-between", flexWrap: "reverse"}}>
             <div>
               <Link to="about" spy={true} smooth={true}>
               <s.HeaderButton>About</s.HeaderButton>
@@ -165,9 +165,15 @@ function App() {
           </div>
         </div>
 
-        <s.Container flex={1} ai={"flex-start"} jc={"flex-start"} style={{borderBottom: "0.5em solid #00e600"}}>
 
-        <s.SpacerLarge/>
+        <s.Container flex={1} ai={"flex-start"} jc={"flex-start"} style={{borderBottom: "0.5em solid #00e600"}}>
+        <div style={{marginTop: 60, marginLeft: 60}}>
+            <div class="subtitle">
+              <span style={{color: "gray"}}>CRYPTO</span><span style={{color: "#00e600"}}>BILLIES</span>
+            </div>
+        </div>
+        <s.SpacerMedium/>
+
         <div style={{paddingLeft: 60, paddingRight: 60, paddingTop: 20}}>
           <div class="title">ten thousand billies living in the metaverse</div>
           <s.SpacerSmall/>
@@ -237,12 +243,12 @@ function App() {
           <img src={banner} alt="Banner" style={{maxWidth: "100%"}}/>
         </s.Container>
 
-        <div id="about" class="about">
+      <div id="about" class="about">
 
-        <div class="subtitle" style={{marginBottom: 40}}>METAVERSE</div>
-        <s.Container flex={1} fd={"row"} ai={"center"} jc={"flex-start"}>
-          <div style={{marginRight: 60}}>
-            <img src={logo} alt="Logo" style={{border: "2px solid #00e600", borderRadius: 30, maxWidth: "100%"}}/>
+
+        <div class="subtitle" style={{marginBottom: 80}}>METAVERSE</div>
+          <div>
+            <img src={logo} alt="Logo" style={{border: "2px solid #00e600", borderRadius: 30, width: "300px", height: "300px", alignSelf: "center", marginBottom: 40}}/>
           </div>
           <div style={{display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
           <div class="description" style={{marginBottom: 30}}>In late 2021, the Billie Universe began to unravel.  A wormhole tore open the fabric of space and time, ripped the Billies from their home and sent them to the Metaverse. The Humans of Earth have finally discovered the secrets of the Metaverse and can now access them through the blockchain. 10,000 Billies lie dormant in this plane waiting to be released. Will you be the hero to free a Billie from the Metaverse?
@@ -252,11 +258,11 @@ function App() {
             Every Billie minted is created algorythmically through the ERC-721 token. No two Billies are the same. Once minted, each Billie will live on the blockchain indefinitely and cannot be altered.
           </div>
           </div>
-        </s.Container>
+
         </div>
 
-        <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "black", padding: 20 }}>
-          <div class="subtitle" style={{alignSelf: "center"}}>
+      <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "transparent", paddingLeft: 20, paddingRight: 20, borderBottom: "0.2em solid #00e600", borderTop: "0.2em solid #00e600" }}>
+          <div class="subtitle" style={{alignSelf: "center", color: "white", fontSize: "20px"}}>
             {/* <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/> */}
             rarities coming soon!
           </div>
@@ -264,11 +270,12 @@ function App() {
           <s.SpacerSmall/> */}
         </s.ContainerTwo>
 
-        <div id="roadmap" class="roadmap">
+
+
+      <div id="roadmap" class="roadmap">
             <div class="subtitle">ROADMAP</div>
             <s.SpacerMedium />
 
-        <s.Container>
 
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
@@ -329,7 +336,6 @@ function App() {
             <div class="description">4 ether will be spent to sweep the floor and increase the floor price! All Billies will be given back to the community.
             </div>
         </s.Container>
-
 
         <s.SpacerSmall/>
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
@@ -429,10 +435,9 @@ function App() {
             <div class="description">In addition to sharing in the royalties, holders will also be rewarded with Billie Coins. We will partner up with developers to create a liquidity pool and generate passive income!
             </div>
         </s.Container> */}
-        </s.Container>
-        </div>
 
-        <div id="faq" class="faq">
+      </div>
+      <div id="faq" class="faq">
           <div class="subtitle">
             FAQ IT UP!
           </div>
@@ -448,16 +453,16 @@ function App() {
           <s.SpacerSmall/>
         </div>
 
-        <div id="team" class="team">
+      <div id="team" class="team">
           <div class="subtitle">
             TEAM
           </div>
           <s.SpacerMedium />
 
-          <s.Billies ai={"center"} style={{flexWrap: "wrap"}}>
+          <s.Billies ai={"center"} style={{flexWrap: "wrap", padding: 10}}>
 
             <s.TextDescription>
-              <img src={Kleidi} alt="Logo" style={ {borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
+              <img src={Kleidi} alt="Logo" style={ {borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription style={{color: "white", backgroundColor: "transparent", padding: 10}}>KLEIDI
               <p style={{fontSize: 25}}>Project Lead</p>
@@ -468,7 +473,7 @@ function App() {
             </s.TextDescription>
 
             <s.TextDescription>
-            <img src={Untai} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
+            <img src={Untai} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>UNTAI
               <p style={{fontSize: 25}}>Illustrator</p>
@@ -479,7 +484,7 @@ function App() {
             </s.TextDescription>
 
             <s.TextDescription>
-            <img src={Gilmo} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
+            <img src={Gilmo} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>PACOMANG
               <p style={{fontSize: 25}}>Illustrator</p>
@@ -490,7 +495,7 @@ function App() {
             </s.TextDescription>
 
             <s.TextDescription>
-            <img src={Anna} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
+            <img src={Anna} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>ANYA
               <p style={{fontSize: 25}}>Developer</p>
@@ -503,9 +508,9 @@ function App() {
           </s.Billies>
         </div>
 
-        <s.Container id="footer" flex={1} ai={"flex-start"} style={{ padding: 30}}>
+      <s.Container id="footer" flex={1} ai={"flex-start"} style={{ padding: 30}}>
         <div class="description">© 2021 CryptoBillies</div>
-        </s.Container>
+      </s.Container>
 
         <s.SocialsButton href="https://twitter.com/NFTBillies" target="_blank">
         <s.TwitterIcon />
