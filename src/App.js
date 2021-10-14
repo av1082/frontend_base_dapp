@@ -255,7 +255,7 @@ function App() {
         </s.Container>
         </div>
 
-        <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "black" }}>
+        <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "black", padding: 20 }}>
           <div class="subtitle" style={{alignSelf: "center"}}>
             {/* <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/> */}
             rarities coming soon!
