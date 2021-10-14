@@ -337,8 +337,6 @@ div.header {
     font-weight: 300;
     font-family: "Copperplate";
     line-height: 1.2;
-    text-align: justify;
-    word-break: keep-all;
   }
 
   div.beyond {
