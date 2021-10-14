@@ -125,7 +125,8 @@ table {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", DejaVu Sans Mono,
+    monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

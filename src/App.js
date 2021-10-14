@@ -165,7 +165,7 @@ function App() {
           </div>
         </div>
 
-        <s.Container flex={1} ai={"flex-start"} jc={"flex-start"}>
+        <s.Container flex={1} ai={"flex-start"} jc={"flex-start"} style={{borderBottom: "0.5em solid #00e600"}}>
 
         <s.SpacerLarge/>
         <div style={{paddingLeft: 60, paddingRight: 60, paddingTop: 20}}>
@@ -174,9 +174,9 @@ function App() {
           <s.SpacerSmall/>
           <s.SpacerSmall/>
           <div style={{display: "flex", flexDirection: "column", alignSelf: "center"}}>
-          <div class="subtitle">coming soon...</div>
+          <div class="soon">coming soon...</div>
           <s.SpacerSmall/>
-          <div>
+          <div style={{alignSelf: "center"}}>
           <CountDownTimer daysHoursMinSecs={daysHoursMinSecs}/>
             </div>
           <s.SpacerXSmall />
@@ -242,7 +242,7 @@ function App() {
         <div class="subtitle" style={{marginBottom: 40}}>METAVERSE</div>
         <s.Container flex={1} fd={"row"} ai={"center"} jc={"flex-start"}>
           <div style={{marginRight: 60}}>
-            <img src={logo} alt="Logo" style={{borderRadius: 30, maxWidth: "100%"}}/>
+            <img src={logo} alt="Logo" style={{border: "2px solid #00e600", borderRadius: 30, maxWidth: "100%"}}/>
           </div>
           <div style={{display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
           <div class="description" style={{marginBottom: 30}}>In late 2021, the Billie Universe began to unravel.  A wormhole tore open the fabric of space and time, ripped the Billies from their home and sent them to the Metaverse. The Humans of Earth have finally discovered the secrets of the Metaverse and can now access them through the blockchain. 10,000 Billies lie dormant in this plane waiting to be released. Will you be the hero to free a Billie from the Metaverse?
@@ -274,7 +274,7 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [10%]
             </div>
             <s.SpacerSmall/>
@@ -288,7 +288,7 @@ function App() {
         <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [20%]
             </div>
             <s.SpacerSmall/>
@@ -303,7 +303,7 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [30%]
             </div>
             <s.SpacerSmall/>
@@ -320,7 +320,7 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [40%]
             </div>
             <s.SpacerSmall/>
@@ -336,7 +336,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [50%]
             </div>
             <s.SpacerSmall/>
@@ -350,7 +350,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [60%]
             </div>
             <s.SpacerSmall/>
@@ -364,7 +364,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [70%]
             </div>
             <s.SpacerSmall/>
@@ -378,7 +378,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
             [80%]
             </div>
             <s.SpacerSmall/>
@@ -392,7 +392,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, marginRight: 15, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", paddingRight: 35}}>
             [90%]
             </div>
             <s.SpacerSmall/>
@@ -406,7 +406,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", padding: 20, borderRadius: 10, boxShadow: 20}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", paddingRight: 10}}>
               [100%]
             </div>
             <s.SpacerSmall/>
@@ -416,11 +416,11 @@ function App() {
         </s.Container>
 
         <s.SpacerSmall/>
-        <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
+        {/* <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="beyond" style={{backgroundColor: "transparent", padding: 20, borderRadius: 10, boxShadow: 20}}>
+            <div class="beyond" style={{backgroundColor: "transparent", paddingRight: 25}}>
             [beyond]
             </div>
 
@@ -428,7 +428,7 @@ function App() {
           </s.Container>
             <div class="description">In addition to sharing in the royalties, holders will also be rewarded with Billie Coins. We will partner up with developers to create a liquidity pool and generate passive income!
             </div>
-        </s.Container>
+        </s.Container> */}
         </s.Container>
         </div>
 
@@ -459,7 +459,7 @@ function App() {
             <s.TextDescription>
               <img src={Kleidi} alt="Logo" style={ {borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription style={{color: "white", backgroundColor: "transparent", padding: 10}}>Kleidi
+              <s.TextDescription style={{color: "white", backgroundColor: "transparent", padding: 10}}>KLEIDI
               <p style={{fontSize: 25}}>Project Lead</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.linkedin.com/in/kleidimico/" target="_blank">
@@ -470,8 +470,8 @@ function App() {
             <s.TextDescription>
             <img src={Untai} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>Untai
-              <p>Illustrator</p>
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>UNTAI
+              <p style={{fontSize: 25}}>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.untaikisah.com/" target="_blank">
                 <s.Portfolio />
@@ -481,8 +481,8 @@ function App() {
             <s.TextDescription>
             <img src={Gilmo} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>Pacomang
-              <p>Illustrator</p>
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>PACOMANG
+              <p style={{fontSize: 25}}>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.instagram.com/papacocomama/" target="_blank">
               <s.Ig/>
@@ -492,8 +492,8 @@ function App() {
             <s.TextDescription>
             <img src={Anna} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 300, height: 300}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>Anya
-              <p>Developer</p>
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>ANYA
+              <p style={{fontSize: 25}}>Developer</p>
               </s.TextDescription>
               <s.SocialsButton href="https://github.com/av1082" target="_blank">
               <s.Git/>

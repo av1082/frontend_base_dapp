@@ -103,6 +103,7 @@
 div.header {
   position: fixed;
   top: 0;
+  background-color: rgb(0, 22, 16);
   width: 100%;
   display: flex;
   flex: 1;
@@ -112,7 +113,17 @@ div.header {
   padding-top: 2%;
   padding-right: 5%;
   padding-left: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00e600;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -176,15 +187,37 @@ div.header {
 
   div.subtitle {
     color: #00e600;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    font-family: "Copperplate";
+  }
+
+  div.soon {
+    color: #00e600;
     font-size: 25px;
     font-weight: 300;
-    letter-spacing: 4px;
+    letter-spacing: 8px;
     font-family: "Copperplate";
+    overflow: hidden;
+    border-right: 0.1em solid #00e600;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3s steps(20, end), blink-caret 1s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
   }
 
   div.description {
     color: var(--white);
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 300;
     font-family: "Copperplate";
     line-height: 1.1;
@@ -194,9 +227,10 @@ div.header {
 
   div.beyond {
     color: var(--white);
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 300;
     font-family: "Copperplate";
+    letter-spacing: 6px;
   }
 
   div.countdown {
@@ -271,8 +305,30 @@ div.header {
     color: #00e600;
     font-size: 50px;
     font-weight: 300;
-    letter-spacing: 4px;
+    letter-spacing: 8px;
     font-family: "Copperplate";
+  }
+
+  div.soon {
+    color: #00e600;
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    font-family: "Copperplate";
+    overflow: hidden;
+    border-right: 0.1em solid #00e600;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 35%;
+    }
   }
 
   div.description {
