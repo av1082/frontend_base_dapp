@@ -1,32 +1,21 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
-import * as V from 'victory';
-import { VictoryPie, VictoryLabel } from 'victory';
 import { Link } from 'react-scroll';
 import Faq from "react-faq-component";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import CountDownTimer from './components/Countdown'
-
 import * as s from "./styles/globalStyles";
+import styled from "styled-components";
+import { create } from "ipfs-http-client";
+
 import logo from "./styles/Billie.gif"
-import background from "./styles/Background.jpg"
-import billieTitle from "./styles/BillieTitle.png"
+import banner from "./styles/Banner.png"
 import Anna from "./styles/Anna.jpg"
 import Kleidi from "./styles/Kleidi.jpg"
 import Gilmo from "./styles/Gilmo.png"
 import Untai from "./styles/Untai.png"
-import banner from "./styles/Banner.png"
-import Roadmap from "./styles/Roadmap.png"
-import About from "./styles/About.png"
-import Team from "./styles/Team.png"
-import Title from "./styles/Title.png"
-import Rarities from "./styles/Rarities.png"
-
-import FAQ from "./styles/FAQ.png"
-import styled from "styled-components";
-import { create } from "ipfs-http-client";
 import ImageSlider from "./components/ImageSlider";
 import {SliderData} from "./components/SliderData"
 
