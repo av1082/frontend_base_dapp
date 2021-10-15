@@ -37,7 +37,7 @@ const faqData = {
       },
       {
           title: "When will pre-sale happen?",
-          content: "Members who are whitelisted can participate in the pre-sale on October 23rd.",
+          content: "Members who are whitelisted can participate in the pre-sale on October 30th.",
       },
       {
           title: "What is the price of one mint?",
