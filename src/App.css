@@ -1,5 +1,5 @@
 .body {
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   background: rgb(54, 57, 56);
   background: linear-gradient(0deg, rgb(33, 34, 33) 0%, rgb(0, 22, 16) 100%);

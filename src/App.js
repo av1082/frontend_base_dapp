@@ -453,7 +453,7 @@ function App() {
               <img src={Kleidi} alt="Logo" style={ {borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription style={{color: "white", backgroundColor: "transparent", padding: 10, fontWeight: 600}}>KLEIDI
-              <p style={{fontSize: 25, fontWeight: 500}}>project lead</p>
+              <p style={{fontSize: 25, fontWeight: 500}}>Project Lead</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.linkedin.com/in/kleidimico/" target="_blank">
               <s.LinkedIn/>
@@ -464,7 +464,7 @@ function App() {
             <img src={Untai} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10, fontWeight: 600 }}>UNTAI
-              <p style={{fontSize: 25, fontWeight: 500}}>illustrator</p>
+              <p style={{fontSize: 25, fontWeight: 500}}>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.untaikisah.com/" target="_blank">
                 <s.Portfolio />
@@ -475,7 +475,7 @@ function App() {
             <img src={Gilmo} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10, fontWeight: 600 }}>PACOMANG
-              <p style={{fontSize: 25, fontWeight: 500}}>illustrator</p>
+              <p style={{fontSize: 25, fontWeight: 500}}>Illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.instagram.com/papacocomama/" target="_blank">
               <s.Ig/>
@@ -486,7 +486,7 @@ function App() {
             <img src={Anna} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
               <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10, fontWeight: 600 }}>ANYA
-              <p style={{fontSize: 25, fontWeight: 500}}>developer</p>
+              <p style={{fontSize: 25, fontWeight: 500}}>Developer</p>
               </s.TextDescription>
               <s.SocialsButton href="https://github.com/av1082" target="_blank">
               <s.Git/>
