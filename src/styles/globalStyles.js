@@ -25,7 +25,7 @@ export const Header = styled.header`
   line-height: 120px;
   height: 100px;
   background: transparent;
-  font-family: "Copperplate";
+  font-family: 'Alegreya Sans SC', sans-serif;
 
 `;
 
@@ -35,8 +35,8 @@ export const HeaderButton = styled.button`
   background: transparent;
   color: white;
   font-weight: 300;
-  font-family: "Copperplate";
-  font-size: 15px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 20px;
   border: 2px solid transparent;
 `;
 
@@ -48,7 +48,7 @@ export const MintButton = styled.button`
   background: #360368;
   color: white;
   font-weight: bold;
-  font-family: "Copperplate";
+  font-family: 'Alegreya Sans SC', sans-serif;
   border: 2px solid #360368;
 
   &:hover {
@@ -74,7 +74,7 @@ export const ConnectButton = styled.button`
   background: transparent;
   color: white;
   font-weight: bold;
-  font-family: "Copperplate";
+  font-family: 'Alegreya Sans SC', sans-serif;
   border: 2px solid #00e600;
 
   &:hover {
@@ -164,21 +164,21 @@ export const TextTitle = styled.p`
   color: var(--white);
   font-size: 80px;
   font-weight: bold;
-  font-family: "Copperplate";
+  font-family: 'Alegreya Sans SC', sans-serif;
 `;
 
 export const TextSubTitle = styled.p`
   color: var(--white);
   font-size: 40px;
   font-weight: bold;
-  font-family: "Copperplate"
+  font-family: 'Alegreya Sans SC', sans-serif
 `;
 
 export const TextDescription = styled.p`
   color: var(--white);
   font-size: 30px;
   font-weight: 300;
-  font-family: "Copperplate";
+  font-family: 'Alegreya Sans SC', sans-serif;
 `;
 
 export const StyledClickable = styled.div`

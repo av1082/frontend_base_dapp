@@ -52,7 +52,6 @@ const faqData = {
 
 const faqStyles = {
   bgColor: "transparent",
-  fontFamily: "Copperplate",
   rowContentTextSize: "20px",
   rowTitleColor: "white",
   rowTitleTextSize: "30px",
@@ -156,20 +155,20 @@ function App() {
 
 
         <s.Container flex={1} ai={"flex-start"} jc={"flex-start"} style={{borderBottom: "0.5em solid #00e600"}}>
-        <div style={{marginTop: 60, marginLeft: "5%"}}>
-            <div class="subtitle">
+        <div style={{marginTop: 80, marginLeft: "5%"}}>
+            <div class="subtitle" style={{fontWeight: 600}}>
               <span style={{color: "gray"}}>CRYPTO</span><span style={{color: "#00e600"}}>BILLIES</span>
             </div>
         </div>
         <s.SpacerMedium/>
 
         <div style={{paddingLeft: "5%", paddingRight: 60, paddingTop: 20}}>
-          <div class="title">ten thousand billies living in the metaverse</div>
+          <div class="title" style={{fontWeight: 800}}>10,000 BILLIES LIVING IN THE METAVERSE</div>
           <s.SpacerSmall/>
           <s.SpacerSmall/>
           <s.SpacerSmall/>
           <div style={{display: "flex", flexDirection: "column", alignSelf: "center"}}>
-          <div class="soon">coming soon...</div>
+          <div class="soon">COMING SOON...</div>
           <s.SpacerSmall/>
           <div style={{alignSelf: "center"}}>
           <CountDownTimer daysHoursMinSecs={daysHoursMinSecs}/>
@@ -235,7 +234,7 @@ function App() {
       <div id="about" class="about">
 
 
-        <div class="subtitle" style={{marginBottom: 80}}>METAVERSE</div>
+        <div class="subtitle" style={{marginBottom: 80, fontWeight: 600}}>METAVERSE</div>
           <div>
             <img src={logo} alt="Logo" style={{border: "2px solid #00e600", borderRadius: 30, width: "300px", height: "300px", alignSelf: "center", marginBottom: 40}}/>
           </div>
@@ -253,7 +252,7 @@ function App() {
       <s.ContainerTwo id="rarities" ai={"center"} style={{backgroundColor: "transparent", paddingLeft: 20, paddingRight: 20, borderBottom: "0.2em solid #00e600", borderTop: "0.2em solid #00e600" }}>
           <div class="subtitle" style={{alignSelf: "center", color: "white", fontSize: "20px"}}>
             {/* <img src={Rarities} alt="Rarities" style={{maxWidth: "100%", marginTop: 40}}/> */}
-            rarities coming soon!
+            RARITIES COMING SOON!
           </div>
           {/* <ImageSlider slides={SliderData} />
           <s.SpacerSmall/> */}
@@ -262,7 +261,7 @@ function App() {
 
 
       <div id="roadmap" class="roadmap">
-            <div class="subtitle">ROADMAP</div>
+            <div class="subtitle" style={{fontWeight: 600}}>ROADMAP</div>
             <s.SpacerMedium />
 
 
@@ -270,7 +269,7 @@ function App() {
             <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 40}}>
             [10%]
             </div>
             <s.SpacerSmall/>
@@ -359,7 +358,7 @@ function App() {
           <s.Container fd={"row"} ai={"center"} jc={"flex-start"}>
 
             <s.SpacerSmall/>
-            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 35}}>
+            <div class="subtitle" style={{backgroundColor: "transparent", color: "white", marginRight: 38}}>
             [70%]
             </div>
             <s.SpacerSmall/>
@@ -427,7 +426,7 @@ function App() {
 
       </div>
       <div id="faq" class="faq">
-          <div class="subtitle">
+          <div class="subtitle" style={{fontWeight: 600}}>
             FAQ IT UP!
           </div>
           <s.SpacerMedium />
@@ -443,7 +442,7 @@ function App() {
         </div>
 
       <div id="team" class="team">
-          <div class="subtitle">
+          <div class="subtitle" style={{fontWeight: 600}}>
             TEAM
           </div>
           <s.SpacerMedium />
@@ -453,8 +452,8 @@ function App() {
             <s.TextDescription>
               <img src={Kleidi} alt="Logo" style={ {borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription style={{color: "white", backgroundColor: "transparent", padding: 10}}>KLEIDI
-              <p style={{fontSize: 25}}>Project Lead</p>
+              <s.TextDescription style={{color: "white", backgroundColor: "transparent", padding: 10, fontWeight: 600}}>KLEIDI
+              <p style={{fontSize: 25, fontWeight: 500}}>project lead</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.linkedin.com/in/kleidimico/" target="_blank">
               <s.LinkedIn/>
@@ -464,8 +463,8 @@ function App() {
             <s.TextDescription>
             <img src={Untai} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>UNTAI
-              <p style={{fontSize: 25}}>Illustrator</p>
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10, fontWeight: 600 }}>UNTAI
+              <p style={{fontSize: 25, fontWeight: 500}}>illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.untaikisah.com/" target="_blank">
                 <s.Portfolio />
@@ -475,8 +474,8 @@ function App() {
             <s.TextDescription>
             <img src={Gilmo} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>PACOMANG
-              <p style={{fontSize: 25}}>Illustrator</p>
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10, fontWeight: 600 }}>PACOMANG
+              <p style={{fontSize: 25, fontWeight: 500}}>illustrator</p>
               </s.TextDescription>
               <s.SocialsButton href="https://www.instagram.com/papacocomama/" target="_blank">
               <s.Ig/>
@@ -486,8 +485,8 @@ function App() {
             <s.TextDescription>
             <img src={Anna} alt="Logo" style={{borderRadius: 50, border: "3px solid #00e600", width: 250, height: 250}}/>
             <s.SpacerXSmall/>
-              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10 }}>ANYA
-              <p style={{fontSize: 25}}>Developer</p>
+              <s.TextDescription alignSelf={"center"} style={{color: "white", padding: 10, fontWeight: 600 }}>ANYA
+              <p style={{fontSize: 25, fontWeight: 500}}>developer</p>
               </s.TextDescription>
               <s.SocialsButton href="https://github.com/av1082" target="_blank">
               <s.Git/>
