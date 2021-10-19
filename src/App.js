@@ -508,7 +508,7 @@ function App() {
         <s.Ig style={{position: "fixed", right: "120px", bottom: "15px"}}/>
         </s.SocialsButton>
 
-        <s.SocialsButton href="https://discord.gg/ZCY7P55q" target="_blank">
+        <s.SocialsButton href="https://discord.gg/eWfb82C7RR" target="_blank">
         <s.Discord />
         </s.SocialsButton>
     </div>
